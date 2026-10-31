@@ -3,47 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DR NFH | Nutrition · Food · Health — Dr. Nida Fatima Hazari</title>
-  
-  <meta name="description" content="DR NFH: Transforming health from within. Led by Dr. Nida Fatima Hazari (PhD Gold Medallist, ICMR Scientist, Oxford Alum, Counselling Psychologist). Specialized in Clinical Nutrition, Mind-Gut Axis, Emotional Eating, and the SMARTPLATE™ Ecosystem in Hyderabad.">
-  <meta name="keywords" content="Dr Nida Fatima Hazari, DR NFH, Nutrition Food Health, Clinical Nutritionist Hyderabad, Counselling Psychologist Hyderabad, SMARTPLATE, Emotional Eating, PCOS Gut Health">
-  
-  <!-- Favicon / Fonts -->
+  <title>DR NFH | Nutrition · Food · Health | Dr. Nida Fatima Hazari</title>
+  <meta name="description" content="Bridging the science of nutrition with the power of psychology to help you build a healthier, more balanced, and purpose-driven life.">
+
+  <!-- Tailwind CSS & Lucide Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome 6.5.1 CDN -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: {
-            serif: ['"Playfair Display"', 'Georgia', 'serif'],
-            display: ['Cinzel', 'serif'],
-            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
-          },
           colors: {
-            nfh: {
-              emerald: '#0F3D39',
-              dark: '#082522',
+            brand: {
+              emerald: '#0B332E',
+              dark: '#061D1A',
               cream: '#FAF8F4',
-              sand: '#F3EFE6',
+              sand: '#F2EDE4',
               gold: '#C59B27',
               goldLight: '#E8C862',
-              goldSoft: 'rgba(197, 155, 39, 0.12)',
               sage: '#4E8777',
-              terracotta: '#C86D51',
+              accent: '#235D50'
             }
           },
-          boxShadow: {
-            'luxury': '0 20px 45px -15px rgba(15, 61, 57, 0.08), 0 0 25px 0 rgba(197, 155, 39, 0.05)',
-            'card-hover': '0 24px 50px -12px rgba(15, 61, 57, 0.15)',
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
           }
         }
       }
@@ -51,1472 +41,1052 @@
   </script>
 
   <style>
-    /* Custom Luxury Styling */
-    ::selection {
-      background-color: #C59B27;
-      color: #FAF8F4;
+    body {
+      background-color: #FAF8F4;
+      color: #1A2421;
+      font-family: 'Plus Jakarta Sans', sans-serif;
     }
-
-    .glass-header {
-      background: rgba(250, 248, 244, 0.92);
+    .font-serif {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(197, 155, 39, 0.18);
+    }
+    .glass-card-dark {
+      background: rgba(11, 51, 46, 0.95);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(232, 200, 98, 0.2);
     }
-
-    .hero-mesh {
-      background-color: #FAF8F4;
-      background-image: 
-        radial-gradient(at 10% 15%, rgba(78, 135, 119, 0.12) 0px, transparent 50%),
-        radial-gradient(at 90% 20%, rgba(197, 155, 39, 0.10) 0px, transparent 55%),
-        radial-gradient(at 50% 90%, rgba(15, 61, 57, 0.06) 0px, transparent 60%);
-    }
-
-    .gold-shimmer {
-      background: linear-gradient(120deg, #C59B27 0%, #F5DF88 50%, #C59B27 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .gold-border-gradient {
-      border-image: linear-gradient(to bottom right, #E8C862, #C59B27, #8D6B10) 1;
-    }
-
-    /* Custom scrollbar */
-    ::-webkit-scrollbar {
-      width: 7px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #F3EFE6;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #0F3D39;
-      border-radius: 9999px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #C59B27;
+    .badge-pill {
+      background: rgba(197, 155, 39, 0.12);
+      border: 1px solid rgba(197, 155, 39, 0.3);
+      color: #0B332E;
     }
   </style>
 </head>
+<body class="selection:bg-brand-gold selection:text-brand-dark antialiased">
 
-<body class="bg-nfh-cream text-slate-800 antialiased font-sans selection:bg-nfh-gold selection:text-white">
-
-  <!-- Top Announcement Bar -->
-  <div class="bg-nfh-dark text-slate-200 text-xs sm:text-sm py-2.5 px-4 border-b border-white/10">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2.5">
-      <div class="flex items-center gap-2">
-        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-nfh-gold text-nfh-dark tracking-wide">
-          <i class="fa-solid fa-sparkles mr-1.5 text-[9px]"></i> CLINICAL NUTRITION + PSYCHOLOGY
+  <!-- Top Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-brand-gold/15">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#" class="flex flex-col group">
+        <span class="font-serif text-2xl font-bold tracking-wider text-brand-dark flex items-center gap-2">
+          DR NFH
+          <span class="inline-block w-2 h-2 rounded-full bg-brand-gold"></span>
         </span>
-        <span class="text-slate-300 text-xs sm:text-[13px] hidden sm:inline">
-          Evidence-based transformation for Metabolic & Hormonal Health, Mind-Gut Axis & Emotional Eating.
-        </span>
-      </div>
-      <div class="flex items-center space-x-5 text-xs font-semibold ml-auto sm:ml-0">
-        <a href="tel:+919030624163" class="hover:text-nfh-goldLight transition-colors flex items-center gap-1.5">
-          <i class="fa-solid fa-phone text-nfh-gold text-xs"></i> +91 90306 24163
-        </a>
-        <a href="https://wa.me/919030624163?text=Hello%20Dr.%20Nida%20Fatima%20Hazari,%20I%20would%20like%20to%20inquire%20about%20a%20consultation" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-300 transition-colors flex items-center gap-1.5 text-emerald-400">
-          <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Desk
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Navigation Bar -->
-  <header class="sticky top-0 z-40 glass-header border-b border-nfh-sand shadow-sm transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
-        
-        <!-- Luxury Brand Logo -->
-        <a href="#" class="flex items-center gap-3.5 group">
-          <div class="w-12 h-12 rounded-full bg-nfh-emerald flex items-center justify-center text-white border-2 border-nfh-gold shadow-md group-hover:scale-105 transition-transform duration-300">
-            <span class="font-display font-bold text-sm tracking-widest text-nfh-goldLight">NFH</span>
-          </div>
-          <div class="flex flex-col">
-            <span class="font-display font-extrabold text-xl tracking-[0.16em] text-nfh-emerald leading-none">
-              DR. NFH
-            </span>
-            <span class="text-[10px] uppercase font-bold tracking-[0.24em] text-nfh-gold mt-1">
-              Nutrition · Food · Health
-            </span>
-          </div>
-        </a>
-
-        <!-- Desktop Navigation -->
-        <nav class="hidden lg:flex items-center space-x-7 text-xs font-bold uppercase tracking-wider text-slate-700">
-          <a href="#about" class="hover:text-nfh-emerald transition-colors">About Dr. Nida</a>
-          <a href="#philosophy" class="hover:text-nfh-emerald transition-colors">Philosophy</a>
-          <a href="#smartplate" class="hover:text-nfh-emerald transition-colors flex items-center gap-1">
-            SMARTPLATE™ <span class="text-[9px] bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded-full font-sans">Ecosystem</span>
-          </a>
-          <a href="#services" class="hover:text-nfh-emerald transition-colors">Consultations</a>
-          <a href="#quiz" class="text-amber-800 hover:text-amber-900 bg-amber-50/80 px-2.5 py-1 rounded-full border border-amber-200 transition-colors flex items-center gap-1.5">
-            <i class="fa-solid fa-heart-pulse text-xs text-amber-600"></i> Mind-Gut Check
-          </a>
-          <a href="#testimonials" class="hover:text-nfh-emerald transition-colors">Stories</a>
-          <a href="#contact" class="hover:text-nfh-emerald transition-colors">Contact</a>
-        </nav>
-
-        <!-- CTA & Mobile Trigger -->
-        <div class="flex items-center gap-3">
-          <button onclick="openBookingModal('Comprehensive Consultation (60 Mins)')" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs uppercase font-extrabold tracking-wider text-white bg-nfh-emerald hover:bg-nfh-dark border border-nfh-gold/60 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
-            <i class="fa-solid fa-calendar-check mr-2 text-nfh-goldLight"></i> Book Consultation
-          </button>
-          
-          <button id="mobileMenuBtn" aria-label="Toggle navigation menu" class="lg:hidden p-2 rounded-xl text-nfh-emerald hover:bg-nfh-sand focus:outline-none transition-colors">
-            <i class="fa-solid fa-bars-staggered text-2xl" id="menuIcon"></i>
-          </button>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Mobile Drawer Menu -->
-    <div id="mobileMenu" class="hidden lg:hidden border-t border-nfh-sand bg-nfh-cream/98 px-6 pt-5 pb-7 space-y-4 shadow-2xl">
-      <a href="#about" class="block py-2 text-sm font-bold tracking-wide text-slate-800 hover:text-nfh-emerald">About Dr. Nida Fatima Hazari</a>
-      <a href="#philosophy" class="block py-2 text-sm font-bold tracking-wide text-slate-800 hover:text-nfh-emerald">Interdisciplinary Philosophy</a>
-      <a href="#smartplate" class="block py-2 text-sm font-bold tracking-wide text-emerald-900 hover:text-emerald-700 flex items-center justify-between">
-        <span>SMARTPLATE™ Ecosystem</span>
-        <span class="text-xs bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded-full">Flagship</span>
+        <span class="text-[10px] tracking-[0.25em] text-brand-sage font-medium uppercase -mt-0.5">Nutrition · Food · Health</span>
       </a>
-      <a href="#services" class="block py-2 text-sm font-bold tracking-wide text-slate-800 hover:text-nfh-emerald">Consultation Tiers & Programs</a>
-      <a href="#quiz" class="block py-2 text-sm font-bold tracking-wide text-amber-800">Mind-Gut Insight Assessment (Free)</a>
-      <a href="#testimonials" class="block py-2 text-sm font-bold tracking-wide text-slate-800 hover:text-nfh-emerald">Client & Institutional Reviews</a>
-      <a href="#contact" class="block py-2 text-sm font-bold tracking-wide text-slate-800 hover:text-nfh-emerald">Contact & Location</a>
-      <div class="pt-3">
-        <button onclick="openBookingModal('Comprehensive Consultation (60 Mins)')" class="w-full py-3.5 rounded-full text-xs font-extrabold uppercase tracking-widest text-white bg-nfh-emerald hover:bg-nfh-dark border border-nfh-gold text-center shadow-lg">
-          Book Consultation Now
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium text-brand-dark/80">
+        <a href="#journey" class="hover:text-brand-gold transition-colors">Start Journey</a>
+        <a href="#about" class="hover:text-brand-gold transition-colors">About</a>
+        <a href="#smartplate" class="hover:text-brand-gold transition-colors">SMARTPLATE</a>
+        <a href="#services" class="hover:text-brand-gold transition-colors">Consultations</a>
+        <a href="#testimonials" class="hover:text-brand-gold transition-colors">Testimonials</a>
+        <a href="#contact" class="hover:text-brand-gold transition-colors">Contact</a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="flex items-center gap-4">
+        <button onclick="openBookingModal()" class="hidden sm:inline-flex items-center gap-2 bg-brand-emerald hover:bg-brand-dark text-white px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider uppercase transition shadow-md hover:shadow-brand-emerald/20 border border-brand-gold/30">
+          <span>Book Consultation</span>
+          <i data-lucide="arrow-up-right" class="w-4 h-4 text-brand-gold"></i>
+        </button>
+        <button id="mobileMenuBtn" class="lg:hidden p-2 text-brand-dark focus:outline-none" aria-label="Toggle Menu">
+          <i data-lucide="menu" class="w-6 h-6"></i>
         </button>
       </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-brand-sand px-6 py-6 shadow-xl space-y-4">
+      <a href="#journey" class="block text-brand-dark font-medium py-1" onclick="toggleMobileMenu()">Start Journey</a>
+      <a href="#about" class="block text-brand-dark font-medium py-1" onclick="toggleMobileMenu()">About</a>
+      <a href="#smartplate" class="block text-brand-dark font-medium py-1" onclick="toggleMobileMenu()">SMARTPLATE Ecosystem</a>
+      <a href="#services" class="block text-brand-dark font-medium py-1" onclick="toggleMobileMenu()">Consultations</a>
+      <a href="#testimonials" class="block text-brand-dark font-medium py-1" onclick="toggleMobileMenu()">Testimonials</a>
+      <a href="#contact" class="block text-brand-dark font-medium py-1" onclick="toggleMobileMenu()">Contact</a>
+      <button onclick="openBookingModal(); toggleMobileMenu();" class="w-full text-center bg-brand-emerald text-white py-3 rounded-full text-xs font-semibold tracking-wider uppercase mt-4">
+        Book Consultation
+      </button>
     </div>
   </header>
 
-  <main>
-    <!-- HERO SECTION -->
-    <section class="hero-mesh relative overflow-hidden py-16 lg:py-24 border-b border-nfh-sand">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
-          <!-- Hero Copy -->
-          <div class="lg:col-span-7 space-y-7">
-            
-            <!-- Badges -->
-            <div class="inline-flex flex-wrap items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 border border-nfh-gold/40 text-nfh-dark text-xs sm:text-[13px] font-semibold shadow-sm">
-              <span class="text-nfh-gold font-bold">🌿 PhD Gold Medallist</span>
-              <span class="text-slate-300">•</span>
-              <span>Ex-ICMR Scientist</span>
-              <span class="text-slate-300">•</span>
-              <span class="text-nfh-sage font-bold">Oxford Alum</span>
-              <span class="text-slate-300">•</span>
-              <span>Counselling Psychologist</span>
-            </div>
-
-            <!-- Headline -->
-            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-nfh-emerald font-semibold leading-[1.18] tracking-tight">
-              Where Science Meets the Soul: <br>
-              <span class="italic font-normal text-slate-800">Transform Your Health</span> <br class="hidden sm:inline">
-              <span class="font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-nfh-emerald via-nfh-sage to-nfh-gold">
-                From Within.
-              </span>
-            </h1>
-
-            <!-- Subhead -->
-            <p class="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl font-light">
-              Bridging the clinical rigour of nutritional biochemistry with the transformative empathy of counselling psychology. We help you heal your relationship with food, conquer emotional eating, balance hormones, and cultivate vibrant, lasting vitality.
-            </p>
-
-            <!-- CTA Buttons -->
-            <div class="flex flex-wrap items-center gap-4 pt-2">
-              <button onclick="openBookingModal('Comprehensive Consultation (60 Mins)')" class="inline-flex items-center px-7 py-4 rounded-full font-bold text-xs uppercase tracking-widest text-white bg-nfh-emerald hover:bg-nfh-dark shadow-xl shadow-nfh-emerald/20 transition-all transform hover:-translate-y-0.5 border border-nfh-gold/50">
-                <i class="fa-solid fa-stethoscope mr-2.5 text-nfh-goldLight text-sm"></i> Book a Consultation
-              </button>
-              
-              <a href="#smartplate" class="inline-flex items-center px-7 py-4 rounded-full font-bold text-xs uppercase tracking-widest text-nfh-emerald bg-white border border-nfh-emerald/30 hover:bg-nfh-sand transition-all">
-                <i class="fa-solid fa-cubes mr-2 text-nfh-gold text-sm"></i> Explore SMARTPLATE™
-              </a>
-            </div>
-
-            <!-- Verified Metric Badges -->
-            <div class="pt-8 grid grid-cols-2 sm:grid-cols-4 gap-6 border-t border-nfh-sand">
-              <div class="space-y-1">
-                <div class="font-display font-bold text-2xl sm:text-3xl text-nfh-emerald">20+ Yrs</div>
-                <div class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Clinical & Research</div>
-              </div>
-              <div class="space-y-1">
-                <div class="font-display font-bold text-2xl sm:text-3xl text-nfh-emerald">5,000+</div>
-                <div class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Lives Transformed</div>
-              </div>
-              <div class="space-y-1">
-                <div class="font-display font-bold text-2xl sm:text-3xl text-nfh-gold">7+ Papers</div>
-                <div class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Peer-Reviewed</div>
-              </div>
-              <div class="space-y-1">
-                <div class="font-display font-bold text-2xl sm:text-3xl text-nfh-sage">50+ Talks</div>
-                <div class="text-xs text-slate-500 uppercase tracking-wider font-semibold">IITs & Global Conclaves</div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Hero Visual: Doctor Portrait & Luxury Cards -->
-          <div class="lg:col-span-5 relative flex justify-center">
-            <div class="relative w-full max-w-md">
-              
-              <!-- Ambient Background Glow -->
-              <div class="absolute -inset-4 bg-gradient-to-tr from-nfh-gold/20 via-nfh-sage/15 to-nfh-emerald/20 rounded-[3rem] blur-2xl -z-10"></div>
-              
-              <!-- Main Portrait Container -->
-              <div class="relative bg-white rounded-3xl p-3.5 shadow-luxury border border-nfh-sand">
-                <div class="relative rounded-2xl overflow-hidden aspect-[4/5] bg-gradient-to-b from-stone-100 to-stone-200">
-                  
-                  <!-- Portrait Image with Fallback -->
-                  <img src="founder.jpeg" 
-                       alt="Dr. Nida Fatima Hazari - Founder & Director, DR NFH" 
-                       class="w-full h-full object-cover object-top transition duration-700 hover:scale-105"
-                       onerror="this.onerror=null; this.src='https://placehold.co/600x750/0F3D39/FAF8F4?text=Dr.+Nida+Fatima+Hazari'">
-                  
-                  <!-- Bottom Overlay Gradient -->
-                  <div class="absolute inset-0 bg-gradient-to-t from-nfh-dark/80 via-transparent to-transparent"></div>
-
-                  <!-- Overlay Credentials Tag -->
-                  <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-xl border border-white/50 shadow-lg">
-                    <div class="flex items-center justify-between">
-                      <div>
-                        <h4 class="font-serif font-bold text-base text-nfh-dark">Dr. Nida Fatima Hazari</h4>
-                        <p class="text-[11px] font-semibold text-nfh-emerald">Founder & Director · NFH Nutrition and Beyond LLP</p>
-                      </div>
-                      <div class="w-9 h-9 rounded-full bg-nfh-emerald text-nfh-goldLight flex items-center justify-center text-xs shadow-sm">
-                        <i class="fa-solid fa-award"></i>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-              <!-- Floating Luxury Mini-Badge 1 -->
-              <div class="absolute -top-4 -left-6 bg-white py-2.5 px-4 rounded-2xl shadow-xl border border-nfh-sand hidden sm:flex items-center gap-3">
-                <div class="w-9 h-9 rounded-xl bg-emerald-50 text-nfh-emerald flex items-center justify-center text-sm">
-                  <i class="fa-solid fa-brain"></i>
-                </div>
-                <div>
-                  <div class="text-[10px] uppercase font-bold text-slate-400">Pioneer In</div>
-                  <div class="text-xs font-bold text-slate-800">Mind-Gut Psychology</div>
-                </div>
-              </div>
-
-              <!-- Floating Luxury Mini-Badge 2 -->
-              <div class="absolute -bottom-6 -right-6 bg-white py-3 px-4 rounded-2xl shadow-xl border border-nfh-sand hidden sm:flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-amber-50 text-nfh-gold flex items-center justify-center text-base">
-                  <i class="fa-solid fa-star"></i>
-                </div>
-                <div>
-                  <div class="text-xs font-extrabold text-slate-900">4.9 / 5.0 Rating</div>
-                  <div class="text-[10px] text-slate-500 font-medium">96% Sustainable Retention</div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- CORE PHILOSOPHY / THE DR NFH DIFFERENCE -->
-    <section id="philosophy" class="py-20 bg-white border-b border-nfh-sand">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <span class="text-xs font-extrabold uppercase tracking-widest text-nfh-gold bg-nfh-sand px-4 py-1.5 rounded-full">
-            Interdisciplinary Innovation
-          </span>
-          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-nfh-emerald mt-4 mb-4">
-            Why Dieting Fails & Why Our Integrated Science Works
-          </h2>
-          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-            Most nutrition programs fail because they treat eating as purely biological math. We recognize that food is deeply intertwined with emotional regulation, dopamine loops, sleep architecture, and autonomic stress.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
-          <!-- Pillar 1 -->
-          <div class="p-8 rounded-3xl bg-nfh-cream border border-nfh-sand hover:border-nfh-gold/60 transition-all duration-300 hover:shadow-card-hover group">
-            <div class="w-14 h-14 rounded-2xl bg-emerald-900 text-nfh-goldLight flex items-center justify-center text-2xl mb-6 shadow-sm group-hover:scale-110 transition-transform">
-              <i class="fa-solid fa-dna"></i>
-            </div>
-            <h3 class="font-serif font-bold text-xl text-nfh-emerald mb-3">Clinical Biochemistry</h3>
-            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
-              Precision nutrition based on your lab markers, glycemic variability, hormone cascades (insulin, cortisol, thyroid), and micronutrient deficiencies.
-            </p>
-            <div class="text-xs font-bold text-nfh-emerald flex items-center gap-1.5">
-              <span>Bio-Individual Protocols</span>
-              <i class="fa-solid fa-arrow-right text-[10px] text-nfh-gold"></i>
-            </div>
-          </div>
-
-          <!-- Pillar 2 -->
-          <div class="p-8 rounded-3xl bg-nfh-cream border border-nfh-sand hover:border-nfh-gold/60 transition-all duration-300 hover:shadow-card-hover group">
-            <div class="w-14 h-14 rounded-2xl bg-amber-900 text-amber-200 flex items-center justify-center text-2xl mb-6 shadow-sm group-hover:scale-110 transition-transform">
-              <i class="fa-solid fa-brain"></i>
-            </div>
-            <h3 class="font-serif font-bold text-xl text-nfh-emerald mb-3">Counselling Psychology</h3>
-            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
-              Unpacking shame, binge-restrict cycles, childhood food conditioning, and cortisol-driven appetite triggers using gentle Cognitive-Behavioral insights.
-            </p>
-            <div class="text-xs font-bold text-nfh-emerald flex items-center gap-1.5">
-              <span>Heal Emotional Eating</span>
-              <i class="fa-solid fa-arrow-right text-[10px] text-nfh-gold"></i>
-            </div>
-          </div>
-
-          <!-- Pillar 3 -->
-          <div class="p-8 rounded-3xl bg-nfh-cream border border-nfh-sand hover:border-nfh-gold/60 transition-all duration-300 hover:shadow-card-hover group">
-            <div class="w-14 h-14 rounded-2xl bg-teal-900 text-teal-200 flex items-center justify-center text-2xl mb-6 shadow-sm group-hover:scale-110 transition-transform">
-              <i class="fa-solid fa-shield-virus"></i>
-            </div>
-            <h3 class="font-serif font-bold text-xl text-nfh-emerald mb-3">The Gut-Brain Axis</h3>
-            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-4">
-              Targeting the microbiome that produces 90% of serotonin. Calming bloating, leaky gut, IBS, and chronic low-grade inflammation that affects both mind and body.
-            </p>
-            <div class="text-xs font-bold text-nfh-emerald flex items-center gap-1.5">
-              <span>Microbiome Restoration</span>
-              <i class="fa-solid fa-arrow-right text-[10px] text-nfh-gold"></i>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ABOUT DR. NIDA FATIMA HAZARI -->
-    <section id="about" class="py-20 lg:py-28 bg-nfh-cream relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          
-          <!-- Portrait & Credentials Frame -->
-          <div class="lg:col-span-5 space-y-6">
-            <div class="relative bg-white rounded-3xl p-6 sm:p-8 shadow-luxury border border-nfh-sand">
-              <div class="flex items-center gap-4 pb-6 border-b border-nfh-sand">
-                <div class="w-16 h-16 rounded-2xl bg-nfh-emerald text-white flex items-center justify-center text-2xl border border-nfh-gold shadow-md">
-                  <i class="fa-solid fa-graduation-cap text-nfh-goldLight"></i>
-                </div>
-                <div>
-                  <span class="text-[11px] font-extrabold uppercase tracking-widest text-nfh-gold">Academic Distinction</span>
-                  <h3 class="font-serif font-bold text-xl text-nfh-dark">Dr. Nida Fatima Hazari</h3>
-                  <p class="text-xs text-slate-500 font-medium">PhD (Gold Medallist, 2018) · PJTSAU</p>
-                </div>
-              </div>
-
-              <!-- Formal Credentials List -->
-              <div class="py-6 space-y-3.5 text-xs text-slate-700">
-                <div class="flex items-start gap-3">
-                  <i class="fa-solid fa-circle-check text-nfh-gold text-sm mt-0.5"></i>
-                  <div>
-                    <strong class="text-slate-900 block">Ex-Scientist, Indian Council of Medical Research (ICMR)</strong>
-                    <span class="text-slate-500">Pioneered national health studies on metabolic patterns.</span>
-                  </div>
-                </div>
-                <div class="flex items-start gap-3">
-                  <i class="fa-solid fa-circle-check text-nfh-gold text-sm mt-0.5"></i>
-                  <div>
-                    <strong class="text-slate-900 block">University of Oxford Executive Certification</strong>
-                    <span class="text-slate-500">Global Health Governance & Evidence Translation.</span>
-                  </div>
-                </div>
-                <div class="flex items-start gap-3">
-                  <i class="fa-solid fa-circle-check text-nfh-gold text-sm mt-0.5"></i>
-                  <div>
-                    <strong class="text-slate-900 block">PG Diploma in Counselling Psychology</strong>
-                    <span class="text-slate-500">Cognitive Behavioral Therapy for Eating Disorders & Stress.</span>
-                  </div>
-                </div>
-                <div class="flex items-start gap-3">
-                  <i class="fa-solid fa-circle-check text-nfh-gold text-sm mt-0.5"></i>
-                  <div>
-                    <strong class="text-slate-900 block">UGC-NET Qualified Senior Research Fellow</strong>
-                    <span class="text-slate-500">7+ Publications in indexed international medical journals.</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="pt-4 border-t border-nfh-sand flex items-center justify-between text-xs">
-                <span class="font-bold text-nfh-emerald">Founder & CEO:</span>
-                <span class="text-slate-600 font-medium">NFH Nutrition and Beyond LLP</span>
-              </div>
-            </div>
-
-            <!-- Global Advocate Citation -->
-            <div class="p-5 rounded-2xl bg-nfh-dark text-white border border-nfh-gold/30 flex items-center gap-4">
-              <div class="text-3xl text-nfh-goldLight">
-                <i class="fa-solid fa-earth-asia"></i>
-              </div>
-              <p class="text-xs text-slate-300 leading-relaxed">
-                Appointed speaker and wellness adviser for corporate conclaves, international schools, healthcare summits, and law enforcement training across India.
-              </p>
-            </div>
-          </div>
-
-          <!-- Extended Biography -->
-          <div class="lg:col-span-7 space-y-6">
-            <span class="text-xs font-extrabold uppercase tracking-widest text-nfh-gold bg-white px-4 py-1.5 rounded-full border border-nfh-sand shadow-sm">
-              Distinguished Leadership
-            </span>
-            
-            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-nfh-emerald leading-tight">
-              A Pioneer in Nutritional Psychology & Metabolic Healing
-            </h2>
-
-            <blockquote class="font-serif italic text-lg sm:text-xl text-slate-700 border-l-4 border-nfh-gold pl-5 py-1">
-              “Medicine is sick care; nutrition and psychological resilience are true healthcare. When you change how you nourish your cells and soothe your nervous system, your biology follows.”
-            </blockquote>
-
-            <div class="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed font-light">
-              <p>
-                Dr. Nida Fatima Hazari is an acclaimed Nutritionist, Counselling Psychologist, and Academic Researcher based in Hyderabad. Having spent over two decades at the forefront of clinical nutrition, her interdisciplinary model tackles the root biochemical and emotional etiologies of modern chronic illness.
-              </p>
-              <p>
-                Her practice eliminates restrictive, guilt-based diet plans. Instead, she crafts bespoke, sustainable nourishment strategies that honour cultural foods, family routines, and individual metabolic tempos.
-              </p>
-              <p>
-                Beyond her private clinical practice, Dr. Nida created the acclaimed <strong>SMARTPLATE™ Ecosystem</strong>, an evidence-based institutional food literacy curriculum currently adopted by prominent international schools, universities, and corporate workplaces.
-              </p>
-            </div>
-
-            <div class="pt-4 flex flex-wrap gap-4">
-              <button onclick="openBookingModal('Comprehensive Consultation (60 Mins)')" class="px-6 py-3.5 rounded-full font-bold text-xs uppercase tracking-widest text-white bg-nfh-emerald hover:bg-nfh-dark shadow-md transition">
-                Consult With Dr. Nida
-              </button>
-              <a href="#contact" class="px-6 py-3.5 rounded-full font-bold text-xs uppercase tracking-widest text-nfh-emerald bg-white border border-nfh-emerald/30 hover:bg-nfh-sand transition">
-                Invite for Keynote / Workshop
-              </a>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- FLAGSHIP: SMARTPLATE™ ECOSYSTEM -->
-    <section id="smartplate" class="py-20 lg:py-28 bg-nfh-emerald text-white relative overflow-hidden">
-      <!-- Glow Gradients -->
-      <div class="absolute -right-32 -bottom-32 w-96 h-96 rounded-full bg-nfh-gold/10 blur-3xl pointer-events-none"></div>
-      <div class="absolute -left-32 -top-32 w-96 h-96 rounded-full bg-nfh-sage/20 blur-3xl pointer-events-none"></div>
-
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <span class="text-xs font-extrabold uppercase tracking-widest text-nfh-goldLight bg-white/10 px-4 py-1.5 rounded-full border border-white/15">
-            The Institutional Flagship Framework
-          </span>
-          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-white mt-4 mb-4">
-            The SMARTPLATE™ Ecosystem
-          </h2>
-          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-            Reimagining food literacy and cognitive performance for schools, colleges, and enterprise workplaces. A 360° scientifically validated framework designed to build a culture of health — one plate at a time.
-          </p>
-        </div>
-
-        <!-- Interactive 4-Pillar Tabs -->
-        <div class="bg-white/5 rounded-3xl p-6 sm:p-10 border border-white/15 backdrop-blur-md shadow-2xl">
-          
-          <!-- Pillar Selectors -->
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
-            <button onclick="switchPillar(0)" id="pillarTab0" class="pillar-tab py-4 px-3 rounded-2xl text-center border transition-all duration-300 bg-nfh-gold text-nfh-dark border-nfh-gold font-bold">
-              <i class="fa-solid fa-plate-wheat text-xl block mb-2"></i>
-              <span class="text-xs uppercase tracking-wider block">1. Smart Eating</span>
-            </button>
-            <button onclick="switchPillar(1)" id="pillarTab1" class="pillar-tab py-4 px-3 rounded-2xl text-center border transition-all duration-300 bg-white/5 text-slate-300 border-white/10 hover:bg-white/10">
-              <i class="fa-solid fa-moon text-xl block mb-2"></i>
-              <span class="text-xs uppercase tracking-wider block">2. Mindful Living</span>
-            </button>
-            <button onclick="switchPillar(2)" id="pillarTab2" class="pillar-tab py-4 px-3 rounded-2xl text-center border transition-all duration-300 bg-white/5 text-slate-300 border-white/10 hover:bg-white/10">
-              <i class="fa-solid fa-barcode text-xl block mb-2"></i>
-              <span class="text-xs uppercase tracking-wider block">3. Food Literacy</span>
-            </button>
-            <button onclick="switchPillar(3)" id="pillarTab3" class="pillar-tab py-4 px-3 rounded-2xl text-center border transition-all duration-300 bg-white/5 text-slate-300 border-white/10 hover:bg-white/10">
-              <i class="fa-solid fa-users text-xl block mb-2"></i>
-              <span class="text-xs uppercase tracking-wider block">4. Community</span>
-            </button>
-          </div>
-
-          <!-- Active Pillar Detail Card -->
-          <div id="pillarContent" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white/10 p-6 sm:p-8 rounded-2xl border border-white/10">
-            <!-- Dynamically populated by JS switchPillar() -->
-          </div>
-
-        </div>
-
-        <!-- Institutional Call to Action -->
-        <div class="mt-12 bg-gradient-to-r from-nfh-dark to-nfh-emerald rounded-3xl p-8 border border-nfh-gold/40 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
-          <div class="space-y-2 text-center md:text-left">
-            <h4 class="font-serif font-bold text-2xl text-white">Bring SMARTPLATE™ To Your Institution</h4>
-            <p class="text-slate-300 text-xs sm:text-sm max-w-xl">
-              Customized wellness audits, canteen menu redesigns, faculty/HR workshops, and student metabolic literacy programs.
-            </p>
-          </div>
-          <button onclick="openInstitutionalModal()" class="px-8 py-4 rounded-full font-bold text-xs uppercase tracking-widest text-nfh-dark bg-nfh-gold hover:bg-nfh-goldLight transition-all shadow-lg shrink-0">
-            <i class="fa-solid fa-building-columns mr-2"></i> Request Institution Proposal
-          </button>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- SIGNATURE PACKAGES & CONSULTATIONS -->
-    <section id="services" class="py-20 lg:py-28 bg-white border-b border-nfh-sand">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <span class="text-xs font-extrabold uppercase tracking-widest text-nfh-gold bg-nfh-sand px-4 py-1.5 rounded-full">
-            Evidence-Based Care Pathways
-          </span>
-          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-nfh-emerald mt-4 mb-4">
-            Private Consultations & Transformation Journeys
-          </h2>
-          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-            Select the tier that aligns with your health goals. Available online worldwide or in-person at our Hyderabad clinic.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-          
-          <!-- Tier 1: Quick Consult -->
-          <div class="bg-nfh-cream rounded-3xl p-8 border border-nfh-sand flex flex-col justify-between hover:shadow-card-hover transition-all">
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="text-xs uppercase font-extrabold tracking-widest text-slate-500">Targeted Focus</span>
-                <span class="text-xs bg-slate-200 text-slate-800 px-2.5 py-1 rounded-full font-bold">20 Minutes</span>
-              </div>
-              <h3 class="font-serif font-bold text-2xl text-nfh-dark mb-2">Quick Consult</h3>
-              <p class="text-xs text-slate-500 mb-6">Ideal for quick diet reviews, specific lab report opinions, or supplement evaluation.</p>
-              
-              <div class="mb-6 pb-6 border-b border-nfh-sand">
-                <span class="font-serif font-extrabold text-3xl text-nfh-emerald">₹1,500</span>
-                <span class="text-xs text-slate-500 font-medium ml-1">/ session</span>
-              </div>
-
-              <ul class="space-y-3 text-xs text-slate-700 mb-8 font-medium">
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nfh-gold"></i> Targeted problem analysis</li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nfh-gold"></i> Blood report / biomarker overview</li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nfh-gold"></i> Actionable quick dietary adjustments</li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nfh-gold"></i> Virtual or phone consult</li>
-              </ul>
-            </div>
-
-            <button onclick="openBookingModal('Quick Consult (20 Mins) – ₹1,500')" class="w-full py-3.5 rounded-full font-bold text-xs uppercase tracking-widest text-nfh-emerald border border-nfh-emerald hover:bg-nfh-emerald hover:text-white transition">
-              Select Quick Consult
-            </button>
-          </div>
-
-          <!-- Tier 2: Comprehensive Consultation (FEATURED) -->
-          <div class="bg-white rounded-3xl p-8 border-2 border-nfh-gold shadow-luxury flex flex-col justify-between relative transform md:-translate-y-2">
-            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-nfh-gold text-nfh-dark text-[11px] font-extrabold uppercase tracking-widest px-4 py-1 rounded-full shadow-md">
-              Most Popular Foundation
-            </div>
-
-            <div>
-              <div class="flex items-center justify-between mb-4 pt-2">
-                <span class="text-xs uppercase font-extrabold tracking-widest text-nfh-gold">Deep Dive Assessment</span>
-                <span class="text-xs bg-emerald-100 text-emerald-800 px-2.5 py-1 rounded-full font-bold">60 Minutes</span>
-              </div>
-              <h3 class="font-serif font-bold text-2xl text-nfh-dark mb-2">Comprehensive Clinical Consult</h3>
-              <p class="text-xs text-slate-500 mb-6">Complete mind-gut nutritional and psychological profiling tailored for lasting change.</p>
-              
-              <div class="mb-6 pb-6 border-b border-nfh-sand">
-                <span class="font-serif font-extrabold text-3xl text-nfh-emerald">₹3,000</span>
-                <span class="text-xs text-slate-500 font-medium ml-1">/ one-on-one session</span>
-              </div>
-
-              <ul class="space-y-3 text-xs text-slate-700 mb-8 font-medium">
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check-double text-nfh-gold"></i> In-depth health history & metabolic analysis</li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check-double text-nfh-gold"></i> Psychological profiling of emotional eating triggers</li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check-double text-nfh-gold"></i> Customized bio-individual food strategy</li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check-double text-nfh-gold"></i> Sleep, circadian & stress resilience protocol</li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check-double text-nfh-gold"></i> 7-day WhatsApp follow-up support</li>
-              </ul>
-            </div>
-
-            <button onclick="openBookingModal('Comprehensive Consultation (60 Mins) – ₹3,000')" class="w-full py-4 rounded-full font-bold text-xs uppercase tracking-widest text-white bg-nfh-emerald hover:bg-nfh-dark shadow-md shadow-nfh-emerald/25 transition">
-              Book Comprehensive Session
-            </button>
-          </div>
-
-          <!-- Tier 3: 360° Lifestyle Reset Plan -->
-          <div class="bg-nfh-cream rounded-3xl p-8 border border-nfh-sand flex flex-col justify-between hover:shadow-card-hover transition-all">
-            <div>
-              <div class="flex items-center justify-between mb-4">
-                <span class="text-xs uppercase font-extrabold tracking-widest text-slate-500">Holistic Transformation</span>
-                <span class="text-xs bg-amber-100 text-amber-800 px-2.5 py-1 rounded-full font-bold">3 Deep Sessions</span>
-              </div>
-              <h3 class="font-serif font-bold text-2xl text-nfh-dark mb-2">360° Lifestyle Reset Plan</h3>
-              <p class="text-xs text-slate-500 mb-6">For chronic issues: PCOS, gut dysbiosis, insulin resistance, or long-standing food anxiety.</p>
-              
-              <div class="mb-6 pb-6 border-b border-nfh-sand">
-                <span class="font-serif font-extrabold text-3xl text-nfh-emerald">₹7,500</span>
-                <span class="text-xs text-slate-500 font-medium ml-1">/ 3 intensive sessions</span>
-              </div>
-
-              <ul class="space-y-3 text-xs text-slate-700 mb-8 font-medium">
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nfh-gold"></i> 3 Comprehensive One-on-One Sessions</li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nfh-gold"></i> Progressive multi-stage nutrition redesign</li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nfh-gold"></i> CBT-grounded emotional eating framework</li>
-                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nfh-gold"></i> Continuous WhatsApp accountability support</li>
-              </ul>
-            </div>
-
-            <button onclick="openBookingModal('360° Lifestyle Reset Plan (3 Sessions) – ₹7,500')" class="w-full py-3.5 rounded-full font-bold text-xs uppercase tracking-widest text-nfh-emerald border border-nfh-emerald hover:bg-nfh-emerald hover:text-white transition">
-              Enroll in Reset Plan
-            </button>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- INTERACTIVE: DR NFH MIND-GUT & WELLNESS SCORE CALCULATOR -->
-    <section id="quiz" class="py-20 bg-nfh-sand/40 border-b border-nfh-sand">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-luxury border border-nfh-sand">
-          
-          <div class="text-center max-w-2xl mx-auto mb-8">
-            <span class="text-xs font-extrabold uppercase tracking-widest text-nfh-gold bg-nfh-sand px-3 py-1 rounded-full">
-              Interactive Clinical Self-Check
-            </span>
-            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-nfh-emerald mt-3">
-              The NFH Mind-Gut & Metabolic Pulse
-            </h2>
-            <p class="text-xs sm:text-sm text-slate-500 mt-1">
-              Complete this 2-minute clinical self-assessment to discover your metabolic-psychological balance score and customized care path.
-            </p>
-          </div>
-
-          <form id="quizForm" onsubmit="calculateQuiz(event)" class="space-y-6">
-            
-            <!-- Question 1 -->
-            <div class="space-y-2">
-              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700">
-                1. How would you honestly rate your current relationship with food?
-              </label>
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
-                <label class="cursor-pointer">
-                  <input type="radio" name="q1" value="3" required class="peer sr-only">
-                  <div class="p-3 text-xs rounded-xl border border-slate-200 peer-checked:border-nfh-emerald peer-checked:bg-emerald-50/60 transition">
-                    🌿 <strong>Peaceful & Intuitive:</strong> Eat when hungry, zero food guilt.
-                  </div>
-                </label>
-                <label class="cursor-pointer">
-                  <input type="radio" name="q1" value="2" class="peer sr-only">
-                  <div class="p-3 text-xs rounded-xl border border-slate-200 peer-checked:border-nfh-emerald peer-checked:bg-emerald-50/60 transition">
-                    ⚖️ <strong>Occasional Stress Eating:</strong> Crave sugars when exhausted.
-                  </div>
-                </label>
-                <label class="cursor-pointer">
-                  <input type="radio" name="q1" value="1" class="peer sr-only">
-                  <div class="p-3 text-xs rounded-xl border border-slate-200 peer-checked:border-nfh-emerald peer-checked:bg-emerald-50/60 transition">
-                    🌪️ <strong>Binge-Restrict Cycle:</strong> Constant dieting guilt & cravings.
-                  </div>
-                </label>
-              </div>
-            </div>
-
-            <!-- Question 2 -->
-            <div class="space-y-2">
-              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700">
-                2. How frequently do you experience digestive discomfort (bloating, acidity, irregular bowel)?
-              </label>
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
-                <label class="cursor-pointer">
-                  <input type="radio" name="q2" value="3" required class="peer sr-only">
-                  <div class="p-3 text-xs rounded-xl border border-slate-200 peer-checked:border-nfh-emerald peer-checked:bg-emerald-50/60 transition">
-                    ✨ Rarely or Never
-                  </div>
-                </label>
-                <label class="cursor-pointer">
-                  <input type="radio" name="q2" value="2" class="peer sr-only">
-                  <div class="p-3 text-xs rounded-xl border border-slate-200 peer-checked:border-nfh-emerald peer-checked:bg-emerald-50/60 transition">
-                    ⚡ 1–2 times per week
-                  </div>
-                </label>
-                <label class="cursor-pointer">
-                  <input type="radio" name="q2" value="1" class="peer sr-only">
-                  <div class="p-3 text-xs rounded-xl border border-slate-200 peer-checked:border-nfh-emerald peer-checked:bg-emerald-50/60 transition">
-                    🚨 Almost daily / After most meals
-                  </div>
-                </label>
-              </div>
-            </div>
-
-            <!-- Question 3 -->
-            <div class="space-y-2">
-              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700">
-                3. What describes your afternoon energy levels and sleep rhythm?
-              </label>
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
-                <label class="cursor-pointer">
-                  <input type="radio" name="q3" value="3" required class="peer sr-only">
-                  <div class="p-3 text-xs rounded-xl border border-slate-200 peer-checked:border-nfh-emerald peer-checked:bg-emerald-50/60 transition">
-                    🔋 Steady energy, restorative 7-8 hrs sleep
-                  </div>
-                </label>
-                <label class="cursor-pointer">
-                  <input type="radio" name="q3" value="2" class="peer sr-only">
-                  <div class="p-3 text-xs rounded-xl border border-slate-200 peer-checked:border-nfh-emerald peer-checked:bg-emerald-50/60 transition">
-                    ☕ 3 PM brain fog, need coffee to function
-                  </div>
-                </label>
-                <label class="cursor-pointer">
-                  <input type="radio" name="q3" value="1" class="peer sr-only">
-                  <div class="p-3 text-xs rounded-xl border border-slate-200 peer-checked:border-nfh-emerald peer-checked:bg-emerald-50/60 transition">
-                    🌙 Restless sleep, heavy fatigue & low mood
-                  </div>
-                </label>
-              </div>
-            </div>
-
-            <!-- Question 4 -->
-            <div class="space-y-2">
-              <label class="block text-xs font-bold uppercase tracking-wider text-slate-700">
-                4. What is your primary wellness aspiration?
-              </label>
-              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                <label class="cursor-pointer">
-                  <input type="radio" name="q4" value="hormones" required class="peer sr-only">
-                  <div class="p-2.5 text-center text-xs rounded-xl border border-slate-200 peer-checked:border-nfh-emerald peer-checked:bg-emerald-50/60 font-semibold transition">
-                    🌸 Hormones / PCOS
-                  </div>
-                </label>
-                <label class="cursor-pointer">
-                  <input type="radio" name="q4" value="gut" class="peer sr-only">
-                  <div class="p-2.5 text-center text-xs rounded-xl border border-slate-200 peer-checked:border-nfh-emerald peer-checked:bg-emerald-50/60 font-semibold transition">
-                    🦠 Gut & Microbiome
-                  </div>
-                </label>
-                <label class="cursor-pointer">
-                  <input type="radio" name="q4" value="eating" class="peer sr-only">
-                  <div class="p-2.5 text-center text-xs rounded-xl border border-slate-200 peer-checked:border-nfh-emerald peer-checked:bg-emerald-50/60 font-semibold transition">
-                    🧠 Emotional Eating
-                  </div>
-                </label>
-                <label class="cursor-pointer">
-                  <input type="radio" name="q4" value="metabolic" class="peer sr-only">
-                  <div class="p-2.5 text-center text-xs rounded-xl border border-slate-200 peer-checked:border-nfh-emerald peer-checked:bg-emerald-50/60 font-semibold transition">
-                    ⚖️ Weight & Sugar
-                  </div>
-                </label>
-              </div>
-            </div>
-
-            <button type="submit" class="w-full py-4 rounded-full font-bold text-xs uppercase tracking-widest text-white bg-nfh-emerald hover:bg-nfh-dark shadow-md transition">
-              Generate My Clinical Insight & Score
-            </button>
-          </form>
-
-          <!-- Result Card (Populated after submit) -->
-          <div id="quizResult" class="hidden mt-8 p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-emerald-900 to-nfh-dark text-white border border-nfh-gold/40">
-            <!-- Dynamic Content Injected by calculateQuiz() -->
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS & INSTITUTIONAL TRUST -->
-    <section id="testimonials" class="py-20 bg-white border-b border-nfh-sand">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <span class="text-xs font-extrabold uppercase tracking-widest text-nfh-gold bg-nfh-sand px-4 py-1.5 rounded-full">
-            Real Transformations
-          </span>
-          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-nfh-emerald mt-4 mb-4">
-            Voices of Restored Vitality
-          </h2>
-          <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
-            Read how individuals and institutions experience the interdisciplinary approach of DR NFH.
-          </p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
-          <!-- Testimonial 1 -->
-          <div class="p-8 rounded-3xl bg-nfh-cream border border-nfh-sand flex flex-col justify-between">
-            <div>
-              <div class="flex text-amber-500 text-xs gap-1 mb-4">
-                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              </div>
-              <p class="font-serif italic text-slate-700 text-sm leading-relaxed mb-6">
-                “Dr. Nida completely reframed how I view my late-night snacking. She didn't hand me a sterile calorie sheet; she taught me how chronic work stress was spiking my cortisol. For the first time in 10 years, I feel in control and peaceful around food.”
-              </p>
-            </div>
-            <div class="flex items-center gap-3 pt-4 border-t border-nfh-sand">
-              <div class="w-10 h-10 rounded-full bg-emerald-100 text-nfh-emerald flex items-center justify-center font-bold text-xs">
-                PR
-              </div>
-              <div>
-                <h5 class="font-bold text-xs text-slate-900">Priya Reddy</h5>
-                <p class="text-[11px] text-slate-500">Corporate Director · Hyderabad</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Testimonial 2 -->
-          <div class="p-8 rounded-3xl bg-nfh-cream border border-nfh-sand flex flex-col justify-between">
-            <div>
-              <div class="flex text-amber-500 text-xs gap-1 mb-4">
-                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              </div>
-              <p class="font-serif italic text-slate-700 text-sm leading-relaxed mb-6">
-                “As someone managing elevated HbA1c and severe IBS, I had visited multiple doctors who gave conflicting advice. Dr. Nida's background as an ICMR scientist is evident—her microbiome protocol healed my gut issues in 8 weeks.”
-              </p>
-            </div>
-            <div class="flex items-center gap-3 pt-4 border-t border-nfh-sand">
-              <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-xs">
-                AK
-              </div>
-              <div>
-                <h5 class="font-bold text-xs text-slate-900">Arjun Kapoor</h5>
-                <p class="text-[11px] text-slate-500">Entrepreneur · Banjara Hills</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Testimonial 3 -->
-          <div class="p-8 rounded-3xl bg-nfh-cream border border-nfh-sand flex flex-col justify-between">
-            <div>
-              <div class="flex text-amber-500 text-xs gap-1 mb-4">
-                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              </div>
-              <p class="font-serif italic text-slate-700 text-sm leading-relaxed mb-6">
-                “The SMARTPLATE™ framework transformed our school cafeteria and adolescent awareness. Dr. Nida has a magical way of connecting food science with teenage psychology and attention spans. Truly exceptional.”
-              </p>
-            </div>
-            <div class="flex items-center gap-3 pt-4 border-t border-nfh-sand">
-              <div class="w-10 h-10 rounded-full bg-teal-100 text-teal-800 flex items-center justify-center font-bold text-xs">
-                SM
-              </div>
-              <div>
-                <h5 class="font-bold text-xs text-slate-900">Sister Mary & Faculty</h5>
-                <p class="text-[11px] text-slate-500">International School Principal</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- CONTACT & CLINIC DESK -->
-    <section id="contact" class="py-20 lg:py-28 bg-nfh-cream relative">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          
-          <!-- Contact Info -->
-          <div class="lg:col-span-5 space-y-6">
-            <span class="text-xs font-extrabold uppercase tracking-widest text-nfh-gold bg-white px-4 py-1.5 rounded-full border border-nfh-sand shadow-sm">
-              Connect With Us
-            </span>
-            <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-nfh-emerald">
-              Begin Your Journey to Harmonious Health
-            </h2>
-            <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
-              Whether you wish to schedule an individual consultation, invite Dr. Nida to speak, or bring SMARTPLATE™ to your institution, we welcome your inquiry.
-            </p>
-
-            <div class="space-y-4 pt-2">
-              <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-nfh-sand">
-                <div class="w-10 h-10 rounded-xl bg-emerald-50 text-nfh-emerald flex items-center justify-center shrink-0">
-                  <i class="fa-solid fa-location-dot"></i>
-                </div>
-                <div>
-                  <h4 class="font-bold text-xs text-slate-900 uppercase tracking-wider">Practice Location</h4>
-                  <p class="text-xs text-slate-600 mt-1">Hyderabad, Telangana, India (In-person & Global Virtual Sessions)</p>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-nfh-sand">
-                <div class="w-10 h-10 rounded-xl bg-amber-50 text-nfh-gold flex items-center justify-center shrink-0">
-                  <i class="fa-solid fa-phone"></i>
-                </div>
-                <div>
-                  <h4 class="font-bold text-xs text-slate-900 uppercase tracking-wider">Direct Phone & WhatsApp</h4>
-                  <p class="text-xs text-slate-600 mt-1">
-                    <a href="tel:+919030624163" class="hover:text-nfh-emerald font-semibold">+91 90306 24163</a>
-                  </p>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-4 p-4 rounded-2xl bg-white border border-nfh-sand">
-                <div class="w-10 h-10 rounded-xl bg-teal-50 text-nfh-sage flex items-center justify-center shrink-0">
-                  <i class="fa-solid fa-envelope"></i>
-                </div>
-                <div>
-                  <h4 class="font-bold text-xs text-slate-900 uppercase tracking-wider">Official Email</h4>
-                  <p class="text-xs text-slate-600 mt-1">
-                    <a href="mailto:dr.nidafatimahazari@gmail.com" class="hover:text-nfh-emerald font-medium">dr.nidafatimahazari@gmail.com</a>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Fast WhatsApp Banner -->
-            <div class="p-5 rounded-2xl bg-nfh-dark text-white border border-white/10 flex items-center justify-between">
-              <div>
-                <p class="text-[11px] font-bold uppercase tracking-wider text-nfh-goldLight">Direct Priority Line</p>
-                <p class="text-xs font-bold text-slate-200">Instant WhatsApp Assistant</p>
-              </div>
-              <a href="https://wa.me/919030624163?text=Hello%20Dr.%20Nida%20Fatima%20Hazari,%20I%20would%20like%20to%20inquire%20about%20a%20consultation" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-full bg-emerald-600 text-white font-bold text-xs hover:bg-emerald-500 transition shadow">
-                <i class="fa-brands fa-whatsapp mr-1.5"></i> Chat Now
-              </a>
-            </div>
-          </div>
-
-          <!-- Contact / Inquiry Form -->
-          <div class="lg:col-span-7">
-            <div class="bg-white rounded-3xl p-6 sm:p-10 border border-nfh-sand shadow-luxury">
-              <h3 class="font-serif font-bold text-2xl text-nfh-dark mb-1">Send a Message</h3>
-              <p class="text-xs text-slate-500 mb-6">Our clinical desk will respond within 24 working hours.</p>
-
-              <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-4">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Your Name *</label>
-                    <input type="text" required placeholder="Full Name" class="w-full text-xs px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nfh-emerald bg-nfh-cream/40">
-                  </div>
-                  <div>
-                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Phone Number *</label>
-                    <input type="tel" required placeholder="+91 90000 00000" class="w-full text-xs px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nfh-emerald bg-nfh-cream/40">
-                  </div>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Email Address *</label>
-                    <input type="email" required placeholder="name@domain.com" class="w-full text-xs px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nfh-emerald bg-nfh-cream/40">
-                  </div>
-                  <div>
-                    <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Nature of Inquiry</label>
-                    <select class="w-full text-xs px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nfh-emerald bg-nfh-cream/40">
-                      <option>Individual Consultation</option>
-                      <option>SMARTPLATE™ Institutional Program</option>
-                      <option>Corporate Keynote / Guest Lecture</option>
-                      <option>Media / Academic Partnership</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Your Message or Health Goals</label>
-                  <textarea rows="4" placeholder="Briefly share what you would like to address..." class="w-full text-xs px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-nfh-emerald bg-nfh-cream/40"></textarea>
-                </div>
-
-                <button type="submit" class="w-full py-4 rounded-full font-bold text-xs uppercase tracking-widest text-white bg-nfh-emerald hover:bg-nfh-dark shadow-md transition">
-                  Send Official Message
-                </button>
-              </form>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-  </main>
-
-  <!-- APPOINTMENT BOOKING MODAL -->
-  <div id="bookingModal" class="fixed inset-0 z-50 hidden bg-nfh-dark/70 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
-    <div class="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl border border-nfh-sand relative my-8 transform transition-all">
+  <!-- Hero Section -->
+  <section class="relative pt-36 pb-20 lg:pt-44 lg:pb-32 overflow-hidden bg-gradient-to-b from-brand-sand/50 via-brand-cream to-brand-cream">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
       
-      <!-- Close Button -->
-      <button onclick="closeBookingModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 flex items-center justify-center transition">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
+      <!-- Left Content -->
+      <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full badge-pill text-xs font-medium tracking-wide">
+          <i data-lucide="award" class="w-4 h-4 text-brand-gold"></i>
+          <span>PhD Gold Medallist · ICMR Scientist</span>
+        </div>
 
-      <!-- Modal Header -->
-      <div class="mb-5 pr-8">
-        <span class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-nfh-sand text-nfh-gold text-[11px] font-bold uppercase tracking-wider">
-          <i class="fa-solid fa-calendar-plus"></i> Clinical Scheduling Desk
-        </span>
-        <h3 class="font-serif font-bold text-2xl text-nfh-emerald mt-1.5">
-          Schedule with Dr. Nida Fatima Hazari
-        </h3>
-        <p class="text-xs text-slate-500" id="bookingModalSub">
-          Personalized clinical nutrition & psychological consultation.
+        <p class="text-sm md:text-base font-medium text-brand-sage italic">
+          Hi, I'm Dr. Nida Fatima Hazari…
+        </p>
+
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-brand-dark font-semibold leading-[1.15]">
+          Transform Your Health <br>
+          <span class="italic text-brand-emerald underline decoration-brand-gold/40 underline-offset-8 font-normal">from Within</span>
+        </h1>
+
+        <p class="text-base sm:text-lg text-brand-dark/75 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
+          Bridging the science of nutrition with the power of psychology — to help you build a healthier, more balanced, and purpose-driven life.
+        </p>
+
+        <!-- CTAs -->
+        <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+          <button onclick="openBookingModal()" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-brand-emerald hover:bg-brand-dark text-white font-medium text-sm transition shadow-lg shadow-brand-emerald/15 border border-brand-gold/40 flex items-center justify-center gap-2">
+            <span>Book Consultation</span>
+            <i data-lucide="calendar" class="w-4 h-4 text-brand-gold"></i>
+          </button>
+          <a href="#journey" class="w-full sm:w-auto px-8 py-3.5 rounded-full bg-white hover:bg-brand-sand text-brand-dark font-medium text-sm transition border border-brand-gold/25 flex items-center justify-center gap-2 shadow-sm">
+            <span>Start Your Journey</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 text-brand-sage"></i>
+          </a>
+        </div>
+
+        <!-- Metric Badges -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-brand-gold/15">
+          <div class="p-3 bg-white/70 rounded-2xl border border-brand-gold/10 text-center lg:text-left">
+            <div class="font-serif text-2xl font-bold text-brand-emerald">20+</div>
+            <div class="text-[11px] uppercase tracking-wider text-brand-dark/60 mt-0.5">Years Experience</div>
+          </div>
+          <div class="p-3 bg-white/70 rounded-2xl border border-brand-gold/10 text-center lg:text-left">
+            <div class="font-serif text-2xl font-bold text-brand-emerald">5000+</div>
+            <div class="text-[11px] uppercase tracking-wider text-brand-dark/60 mt-0.5">Lives Impacted</div>
+          </div>
+          <div class="p-3 bg-white/70 rounded-2xl border border-brand-gold/10 text-center lg:text-left">
+            <div class="font-serif text-2xl font-bold text-brand-emerald">7</div>
+            <div class="text-[11px] uppercase tracking-wider text-brand-dark/60 mt-0.5">Research Publications</div>
+          </div>
+          <div class="p-3 bg-white/70 rounded-2xl border border-brand-gold/10 text-center lg:text-left">
+            <div class="font-serif text-2xl font-bold text-brand-emerald">50+</div>
+            <div class="text-[11px] uppercase tracking-wider text-brand-dark/60 mt-0.5">Speaking Sessions</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Visual Card -->
+      <div class="lg:col-span-5 flex justify-center">
+        <div class="relative w-full max-w-sm sm:max-w-md">
+          <!-- Ambient Glow -->
+          <div class="absolute -inset-4 bg-gradient-to-tr from-brand-sage/20 via-brand-gold/10 to-transparent rounded-[2.5rem] blur-xl"></div>
+          
+          <div class="relative rounded-3xl p-4 bg-white/90 border border-brand-gold/25 shadow-2xl">
+            <div class="relative aspect-[4/5] rounded-2xl overflow-hidden bg-brand-dark/5 flex items-center justify-center">
+              <img src="founder.jpeg" 
+                   alt="Dr. Nida Fatima Hazari" 
+                   class="w-full h-full object-cover object-top"
+                   onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1594824813590-798835824c08?auto=format&fit=crop&q=80&w=900';">
+              
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/70 via-transparent to-transparent"></div>
+              
+              <div class="absolute bottom-4 left-4 right-4 text-white p-4 rounded-xl bg-brand-dark/50 backdrop-blur-md border border-white/20">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <h3 class="font-serif font-bold text-lg leading-tight">Dr. Nida Fatima Hazari</h3>
+                    <p class="text-xs text-brand-goldLight font-medium">PhD Gold Medallist · 2018</p>
+                  </div>
+                  <div class="p-2 bg-brand-gold/20 rounded-lg border border-brand-gold/40">
+                    <i data-lucide="sparkles" class="w-5 h-5 text-brand-goldLight"></i>
+                  </div>
+                </div>
+                <div class="mt-2 text-[11px] text-white/80 flex items-center gap-1.5 border-t border-white/10 pt-2">
+                  <i data-lucide="brain" class="w-3.5 h-3.5 text-brand-goldLight"></i>
+                  <span>Nutrition + Psychology Holistic Approach</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social handles inline with site -->
+            <div class="mt-4 pt-3 border-t border-brand-sand flex flex-wrap items-center justify-center gap-4 text-[11px] text-brand-dark/70 font-medium">
+              <span class="flex items-center gap-1"><i data-lucide="instagram" class="w-3.5 h-3.5 text-brand-sage"></i> @dr.nidafatimahazari</span>
+              <span class="flex items-center gap-1"><i data-lucide="facebook" class="w-3.5 h-3.5 text-brand-sage"></i> Dr. NFH Nutrition</span>
+              <span class="flex items-center gap-1"><i data-lucide="twitter" class="w-3.5 h-3.5 text-brand-sage"></i> @drnidahazari</span>
+              <span class="flex items-center gap-1"><i data-lucide="linkedin" class="w-3.5 h-3.5 text-brand-sage"></i> Dr. Nida Fatima Hazari</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 01: Start Your Journey (How Can We Help You?) -->
+  <section id="journey" class="py-24 bg-white border-y border-brand-sand">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-semibold tracking-[0.2em] text-brand-gold uppercase">How Can We Help You?</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-brand-dark">Start Your Journey</h2>
+        <p class="text-brand-dark/70 text-sm sm:text-base">
+          Choose the path that resonates with you — every journey begins with a single step towards better health.
         </p>
       </div>
 
-      <!-- Form -->
-      <form id="appointmentForm" onsubmit="handleAppointmentSubmit(event)" class="space-y-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- 01 Consultation -->
+        <div class="glass-card p-8 rounded-3xl relative hover:border-brand-gold/60 transition duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-serif text-3xl font-bold text-brand-gold/40 group-hover:text-brand-gold transition">01</span>
+              <div class="p-2.5 rounded-2xl bg-brand-sand text-brand-emerald">
+                <i data-lucide="user-check" class="w-5 h-5"></i>
+              </div>
+            </div>
+            <span class="text-xs font-semibold text-brand-sage uppercase tracking-wider">Consultation</span>
+            <h3 class="font-serif text-xl font-bold text-brand-dark mt-1 mb-2">Book a Consultation</h3>
+            <p class="text-sm text-brand-dark/70 leading-relaxed">
+              One-on-one personalised guidance tailored to your unique health needs, goals, and lifestyle.
+            </p>
+          </div>
+          <button onclick="openBookingModal()" class="mt-6 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-brand-emerald group-hover:text-brand-gold transition pt-4 border-t border-brand-sand">
+            <span>Get Started</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+          </button>
+        </div>
+
+        <!-- 02 Session -->
+        <div class="glass-card p-8 rounded-3xl relative hover:border-brand-gold/60 transition duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-serif text-3xl font-bold text-brand-gold/40 group-hover:text-brand-gold transition">02</span>
+              <div class="p-2.5 rounded-2xl bg-brand-sand text-brand-emerald">
+                <i data-lucide="heart-pulse" class="w-5 h-5"></i>
+              </div>
+            </div>
+            <span class="text-xs font-semibold text-brand-sage uppercase tracking-wider">Session</span>
+            <h3 class="font-serif text-xl font-bold text-brand-dark mt-1 mb-2">Book a Session</h3>
+            <p class="text-sm text-brand-dark/70 leading-relaxed">
+              Individual or group support sessions focused on specific wellness goals and behaviour change.
+            </p>
+          </div>
+          <button onclick="openBookingModal()" class="mt-6 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-brand-emerald group-hover:text-brand-gold transition pt-4 border-t border-brand-sand">
+            <span>Explore</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+          </button>
+        </div>
+
+        <!-- 03 Work with NFH -->
+        <div class="glass-card p-8 rounded-3xl relative hover:border-brand-gold/60 transition duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-serif text-3xl font-bold text-brand-gold/40 group-hover:text-brand-gold transition">03</span>
+              <div class="p-2.5 rounded-2xl bg-brand-sand text-brand-emerald">
+                <i data-lucide="sparkle" class="w-5 h-5"></i>
+              </div>
+            </div>
+            <span class="text-xs font-semibold text-brand-sage uppercase tracking-wider">Work with NFH</span>
+            <h3 class="font-serif text-xl font-bold text-brand-dark mt-1 mb-2">Work with NFH</h3>
+            <p class="text-sm text-brand-dark/70 leading-relaxed">
+              Long-term transformation programs combining nutrition science, psychology, and lifestyle redesign.
+            </p>
+          </div>
+          <button onclick="openBookingModal()" class="mt-6 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-brand-emerald group-hover:text-brand-gold transition pt-4 border-t border-brand-sand">
+            <span>Learn More</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+          </button>
+        </div>
+
+        <!-- 04 Partner -->
+        <div class="glass-card p-8 rounded-3xl relative hover:border-brand-gold/60 transition duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-serif text-3xl font-bold text-brand-gold/40 group-hover:text-brand-gold transition">04</span>
+              <div class="p-2.5 rounded-2xl bg-brand-sand text-brand-emerald">
+                <i data-lucide="handshake" class="w-5 h-5"></i>
+              </div>
+            </div>
+            <span class="text-xs font-semibold text-brand-sage uppercase tracking-wider">Partner</span>
+            <h3 class="font-serif text-xl font-bold text-brand-dark mt-1 mb-2">Partner with NFH</h3>
+            <p class="text-sm text-brand-dark/70 leading-relaxed">
+              Strategic business and collaboration partnerships to amplify your health and wellness initiatives.
+            </p>
+          </div>
+          <a href="#contact" class="mt-6 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-brand-emerald group-hover:text-brand-gold transition pt-4 border-t border-brand-sand">
+            <span>Partner Up</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+          </a>
+        </div>
+
+        <!-- 05 Institution -->
+        <div class="glass-card p-8 rounded-3xl relative hover:border-brand-gold/60 transition duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-serif text-3xl font-bold text-brand-gold/40 group-hover:text-brand-gold transition">05</span>
+              <div class="p-2.5 rounded-2xl bg-brand-sand text-brand-emerald">
+                <i data-lucide="building-2" class="w-5 h-5"></i>
+              </div>
+            </div>
+            <span class="text-xs font-semibold text-brand-sage uppercase tracking-wider">Institution</span>
+            <h3 class="font-serif text-xl font-bold text-brand-dark mt-1 mb-2">Bring SMARTPLATE to Your Institution</h3>
+            <p class="text-sm text-brand-dark/70 leading-relaxed">
+              Integrate the SMARTPLATE Ecosystem into your school or corporate environment for lasting impact.
+            </p>
+          </div>
+          <a href="#smartplate" class="mt-6 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-brand-emerald group-hover:text-brand-gold transition pt-4 border-t border-brand-sand">
+            <span>Discover</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+          </a>
+        </div>
+
+        <!-- 06 Speaking -->
+        <div class="glass-card p-8 rounded-3xl relative hover:border-brand-gold/60 transition duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="font-serif text-3xl font-bold text-brand-gold/40 group-hover:text-brand-gold transition">06</span>
+              <div class="p-2.5 rounded-2xl bg-brand-sand text-brand-emerald">
+                <i data-lucide="mic" class="w-5 h-5"></i>
+              </div>
+            </div>
+            <span class="text-xs font-semibold text-brand-sage uppercase tracking-wider">Speaking</span>
+            <h3 class="font-serif text-xl font-bold text-brand-dark mt-1 mb-2">Invite for a Talk</h3>
+            <p class="text-sm text-brand-dark/70 leading-relaxed">
+              Expert speaking sessions on nutrition, mental health, resilience, and food literacy for all audiences.
+            </p>
+          </div>
+          <a href="#contact" class="mt-6 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-brand-emerald group-hover:text-brand-gold transition pt-4 border-t border-brand-sand">
+            <span>Invite Now</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+          </a>
+        </div>
+
+        <!-- 07 Workshop -->
+        <div class="glass-card p-8 rounded-3xl relative hover:border-brand-gold/60 transition duration-300 flex flex-col justify-between group md:col-span-2 lg:col-span-3">
+          <div class="max-w-2xl">
+            <div class="flex items-center gap-4 mb-2">
+              <span class="font-serif text-3xl font-bold text-brand-gold/40 group-hover:text-brand-gold transition">07</span>
+              <span class="text-xs font-semibold text-brand-sage uppercase tracking-wider">Workshop</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-brand-dark mb-2">Request a Workshop</h3>
+            <p class="text-sm text-brand-dark/70 leading-relaxed">
+              Interactive, hands-on workshop sessions customised for schools, corporates, hospitals, and communities.
+            </p>
+          </div>
+          <a href="#contact" class="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-brand-emerald group-hover:text-brand-gold transition pt-4 border-t border-brand-sand">
+            <span>Request</span>
+            <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 02: About DR NFH -->
+  <section id="about" class="py-24 bg-brand-cream relative">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Visual Column -->
+      <div class="lg:col-span-5 order-2 lg:order-1">
+        <div class="glass-card p-8 rounded-3xl border-brand-gold/30 space-y-6 relative">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-2xl bg-brand-emerald flex items-center justify-center text-white">
+              <i data-lucide="graduation-cap" class="w-6 h-6 text-brand-gold"></i>
+            </div>
+            <div>
+              <div class="text-xs uppercase tracking-wider text-brand-sage font-medium">Founder & CEO</div>
+              <div class="font-serif text-lg font-bold text-brand-dark">NFH Nutrition and Beyond LLP</div>
+            </div>
+          </div>
+
+          <div class="space-y-3 pt-2">
+            <div class="flex items-start gap-3 p-3 rounded-xl bg-white/70 border border-brand-sand">
+              <span class="text-base">🏅</span>
+              <div class="text-xs text-brand-dark/90 font-medium leading-relaxed">PhD Gold Medallist</div>
+            </div>
+            <div class="flex items-start gap-3 p-3 rounded-xl bg-white/70 border border-brand-sand">
+              <span class="text-base">🎓</span>
+              <div class="text-xs text-brand-dark/90 font-medium leading-relaxed">UGC–NET Qualified</div>
+            </div>
+            <div class="flex items-start gap-3 p-3 rounded-xl bg-white/70 border border-brand-sand">
+              <span class="text-base">🏥</span>
+              <div class="text-xs text-brand-dark/90 font-medium leading-relaxed">Ex-ICMR Scientist</div>
+            </div>
+            <div class="flex items-start gap-3 p-3 rounded-xl bg-white/70 border border-brand-sand">
+              <span class="text-base">🌍</span>
+              <div class="text-xs text-brand-dark/90 font-medium leading-relaxed">Global Health Advocate</div>
+            </div>
+            <div class="flex items-start gap-3 p-3 rounded-xl bg-white/70 border border-brand-sand">
+              <span class="text-base">📚</span>
+              <div class="text-xs text-brand-dark/90 font-medium leading-relaxed">7 Research Papers</div>
+            </div>
+            <div class="flex items-start gap-3 p-3 rounded-xl bg-white/70 border border-brand-sand">
+              <span class="text-base">🎤</span>
+              <div class="text-xs text-brand-dark/90 font-medium leading-relaxed">50+ Speaking Events</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Narrative Column -->
+      <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full badge-pill text-xs font-semibold tracking-wider uppercase">
+          15+ Years of Research & Practice
+        </div>
         
         <div>
-          <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Select Consultation Pathway *</label>
-          <select id="bookTier" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-nfh-emerald bg-white font-medium">
-            <option value="Comprehensive Consultation (60 Mins) – ₹3,000">Comprehensive Consultation (60 Mins) – ₹3,000</option>
-            <option value="Quick Consult (20 Mins) – ₹1,500">Quick Consult (20 Mins) – ₹1,500</option>
-            <option value="360° Lifestyle Reset Plan (3 Sessions) – ₹7,500">360° Lifestyle Reset Plan (3 Sessions) – ₹7,500</option>
-          </select>
+          <span class="text-xs uppercase tracking-widest text-brand-sage block font-medium">About DR NFH</span>
+          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-brand-dark mt-1">
+            Where Nutrition Meets <br>
+            <span class="italic text-brand-emerald font-normal">the Mind & Soul</span>
+          </h2>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Full Name *</label>
-            <input type="text" id="bookName" required placeholder="Your Name" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-nfh-emerald">
-          </div>
-          <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">WhatsApp / Phone *</label>
-            <input type="tel" id="bookPhone" required placeholder="+91 90000 00000" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-nfh-emerald">
-          </div>
+        <div class="space-y-4 text-brand-dark/80 text-sm sm:text-base leading-relaxed">
+          <p>
+            Dr. Nida Fatima Hazari is a distinguished Nutritionist, Counselling Psychologist, Academic Researcher, and Global Health Advocate from Hyderabad, India. Her interdisciplinary work bridges nutrition science, psychology, and public health.
+          </p>
+          <p>
+            With a PhD in Foods & Nutrition from Telangana State Agricultural University, a PG Diploma in Counselling Psychology, and courses from the University of Oxford, she brings a truly holistic perspective to health and wellness.
+          </p>
+          <p>
+            As Founder & CEO of NFH Nutrition and Beyond LLP, she leads a mission to empower individuals, schools, and organisations to build healthier, more balanced lives through science, empathy, and education.
+          </p>
         </div>
 
-        <div class="grid grid-cols-3 gap-3">
-          <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Age *</label>
-            <input type="number" id="bookAge" required min="12" max="95" placeholder="e.g. 28" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-nfh-emerald">
-          </div>
-          <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Gender *</label>
-            <select id="bookGender" required class="w-full text-xs px-2 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-nfh-emerald bg-white">
-              <option value="Female">Female</option>
-              <option value="Male">Male</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
-          <div>
-            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">City / Timezone *</label>
-            <input type="text" id="bookCity" required placeholder="e.g. Hyderabad" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-nfh-emerald">
-          </div>
-        </div>
-
-        <div>
-          <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Key Focus Area(s)</label>
-          <div class="grid grid-cols-2 gap-2 text-xs">
-            <label class="flex items-center gap-2"><input type="checkbox" name="focus" value="Emotional Eating / Guilt" class="rounded text-nfh-emerald"> Emotional Eating</label>
-            <label class="flex items-center gap-2"><input type="checkbox" name="focus" value="PCOS / Hormones" class="rounded text-nfh-emerald"> PCOS / Hormones</label>
-            <label class="flex items-center gap-2"><input type="checkbox" name="focus" value="Gut Health / IBS" class="rounded text-nfh-emerald"> Gut Health / IBS</label>
-            <label class="flex items-center gap-2"><input type="checkbox" name="focus" value="Diabetes / Insulin" class="rounded text-nfh-emerald"> Diabetes / Insulin</label>
-          </div>
-        </div>
-
-        <div>
-          <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">Preferred Consultation Mode</label>
-          <div class="grid grid-cols-2 gap-2">
-            <label class="cursor-pointer">
-              <input type="radio" name="mode" value="Online Video (Google Meet / Zoom)" checked class="peer sr-only">
-              <div class="p-2.5 text-center text-xs rounded-xl border peer-checked:border-nfh-emerald peer-checked:bg-emerald-50/50 font-bold">
-                💻 Online Video
-              </div>
-            </label>
-            <label class="cursor-pointer">
-              <input type="radio" name="mode" value="In-Person Clinic (Hyderabad)" class="peer sr-only">
-              <div class="p-2.5 text-center text-xs rounded-xl border peer-checked:border-nfh-emerald peer-checked:bg-emerald-50/50 font-bold">
-                🏥 Hyderabad Clinic
-              </div>
-            </label>
-          </div>
-        </div>
-
-        <button type="submit" class="w-full py-4 rounded-full font-bold text-xs uppercase tracking-widest text-white bg-nfh-emerald hover:bg-nfh-dark shadow-lg shadow-nfh-emerald/20 transition">
-          Confirm & Dispatch via WhatsApp / Email
-        </button>
-      </form>
-
-      <!-- Confirmation Feedback -->
-      <div id="bookingSuccess" class="hidden text-center py-6 space-y-4">
-        <div class="w-16 h-16 rounded-full bg-emerald-100 text-nfh-emerald flex items-center justify-center text-3xl mx-auto">
-          <i class="fa-solid fa-check"></i>
-        </div>
-        <h4 class="font-serif font-bold text-2xl text-nfh-dark">Consultation Request Generated!</h4>
-        <p class="text-xs text-slate-600 max-w-sm mx-auto" id="bookingSuccessDetails"></p>
         <div class="pt-2">
-          <a id="bookingWaDispatch" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center px-6 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider transition shadow-md">
-            <i class="fa-brands fa-whatsapp text-base mr-2"></i> Open WhatsApp to Confirm Slot (+91 90306 24163)
+          <a href="#services" class="inline-flex items-center gap-2 text-brand-emerald hover:text-brand-gold font-semibold text-sm transition">
+            <span>Explore My Work</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
         </div>
       </div>
 
     </div>
-  </div>
+  </section>
 
-  <!-- INSTITUTIONAL PROPOSAL MODAL -->
-  <div id="instModal" class="fixed inset-0 z-50 hidden bg-nfh-dark/70 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
-    <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-nfh-sand relative my-8">
-      <button onclick="closeInstitutionalModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center transition">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
+  <!-- Section 03: The SMARTPLATE Ecosystem -->
+  <section id="smartplate" class="py-24 bg-brand-emerald text-white relative overflow-hidden">
+    <!-- Ambient Background Accent -->
+    <div class="absolute -top-32 -right-32 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
 
-      <div class="mb-4">
-        <span class="text-[11px] font-bold uppercase tracking-wider text-nfh-gold bg-nfh-sand px-3 py-0.5 rounded-full">
-          Institutional Partnership
-        </span>
-        <h3 class="font-serif font-bold text-2xl text-nfh-emerald mt-1">SMARTPLATE™ Proposal</h3>
-        <p class="text-xs text-slate-500">For Schools, Universities, and Enterprise Workplaces.</p>
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <span class="text-xs font-semibold tracking-[0.25em] text-brand-goldLight uppercase">SMARTPLATE Framework</span>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold">The SMARTPLATE Ecosystem</h2>
+        <p class="text-brand-sand/80 text-base">
+          Reimagining Food Education for Schools & Corporates
+        </p>
+        <p class="text-xs sm:text-sm text-brand-sand/70 max-w-2xl mx-auto leading-relaxed">
+          SMARTPLATE is a holistic food and nutrition literacy framework that integrates evidence-based eating, emotional wellness, and sustainable habits into educational and corporate environments.
+        </p>
       </div>
 
-      <form onsubmit="handleInstSubmit(event)" class="space-y-3.5">
-        <div>
-          <label class="block text-xs font-bold text-slate-700 mb-1">Organization / School Name *</label>
-          <input type="text" required placeholder="e.g. Oakridge / Tech Mahindra" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300">
-        </div>
-        <div>
-          <label class="block text-xs font-bold text-slate-700 mb-1">Contact Person & Designation *</label>
-          <input type="text" required placeholder="e.g. Principal / HR Director" class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300">
-        </div>
-        <div class="grid grid-cols-2 gap-3">
-          <div>
-            <label class="block text-xs font-bold text-slate-700 mb-1">Phone / WhatsApp *</label>
-            <input type="tel" required placeholder="+91..." class="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-300">
-          </div>
-          <div>
-            <label class="block text-xs font-bold text-slate-700 mb-1">Expected Audience</label>
-            <select class="w-full text-xs px-2 py-2.5 rounded-xl border border-slate-300 bg-white">
-              <option>Students (K-12)</option>
-              <option>Corporate Employees</option>
-              <option>College / Faculty</option>
-            </select>
-          </div>
-        </div>
-        <button type="submit" class="w-full py-3.5 rounded-full bg-nfh-emerald hover:bg-nfh-dark text-white font-bold text-xs uppercase tracking-widest shadow-md">
-          Request Tailored Proposal
-        </button>
-      </form>
-      <div id="instSuccess" class="hidden mt-4 p-4 rounded-xl bg-emerald-50 text-emerald-800 text-xs text-center font-bold">
-        Request logged! Our institutional liaison will send the SMARTPLATE™ dossier to your email and WhatsApp within 24 hours.
-      </div>
-    </div>
-  </div>
-
-  <!-- LUXURY FOOTER -->
-  <footer class="bg-nfh-dark text-slate-400 text-xs border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+      <!-- 4 Pillars -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
         
-        <!-- Brand Summary -->
-        <div class="md:col-span-2 space-y-4">
-          <div class="flex items-center gap-3 text-white">
-            <div class="w-10 h-10 rounded-full bg-nfh-emerald flex items-center justify-center text-nfh-goldLight border border-nfh-gold font-display font-bold text-xs">
-              NFH
+        <div class="glass-card-dark p-6 rounded-3xl border-brand-gold/20">
+          <div class="w-10 h-10 rounded-xl bg-brand-gold/20 flex items-center justify-center text-brand-goldLight mb-4">
+            <i data-lucide="utensils" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-white mb-2">Smart Eating</h3>
+          <p class="text-xs text-brand-sand/75 leading-relaxed">
+            Practical food choices for performance
+          </p>
+        </div>
+
+        <div class="glass-card-dark p-6 rounded-3xl border-brand-gold/20">
+          <div class="w-10 h-10 rounded-xl bg-brand-gold/20 flex items-center justify-center text-brand-goldLight mb-4">
+            <i data-lucide="sun" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-white mb-2">Mindful Living</h3>
+          <p class="text-xs text-brand-sand/75 leading-relaxed">
+            Stress, sleep and emotional balance
+          </p>
+        </div>
+
+        <div class="glass-card-dark p-6 rounded-3xl border-brand-gold/20">
+          <div class="w-10 h-10 rounded-xl bg-brand-gold/20 flex items-center justify-center text-brand-goldLight mb-4">
+            <i data-lucide="book-open" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-white mb-2">Food Literacy</h3>
+          <p class="text-xs text-brand-sand/75 leading-relaxed">
+            Understanding labels, nutrients & habits
+          </p>
+        </div>
+
+        <div class="glass-card-dark p-6 rounded-3xl border-brand-gold/20">
+          <div class="w-10 h-10 rounded-xl bg-brand-gold/20 flex items-center justify-center text-brand-goldLight mb-4">
+            <i data-lucide="users" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-white mb-2">Community Health</h3>
+          <p class="text-xs text-brand-sand/75 leading-relaxed">
+            Building collective wellness culture
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Institutional Features & CTA -->
+      <div class="p-8 sm:p-12 rounded-3xl bg-brand-dark/60 border border-brand-gold/25 max-w-4xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 text-xs sm:text-sm text-brand-sand/90">
+          <div class="flex items-center gap-3">
+            <span class="text-lg">🏫</span>
+            <span>Designed for Schools, Colleges & Corporates</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-lg">📊</span>
+            <span>Evidence-Based Curriculum & Workshops</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-lg">🧠</span>
+            <span>Connects Nutrition with Cognitive Performance</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-lg">🌍</span>
+            <span>Culturally Inclusive & Globally Relevant</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 border-t border-white/10">
+          <a href="#about" class="px-6 py-3 rounded-full text-xs font-semibold uppercase tracking-wider text-white border border-brand-gold/40 hover:bg-white/10 transition">
+            Learn More →
+          </a>
+          <button onclick="openBookingModal()" class="px-6 py-3 rounded-full text-xs font-semibold uppercase tracking-wider bg-brand-gold text-brand-dark hover:bg-brand-goldLight transition font-bold shadow-md">
+            Bring to My Institution
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 04: Consultations & Programs -->
+  <section id="services" class="py-24 bg-brand-sand/40">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-semibold tracking-[0.2em] text-brand-gold uppercase">Consultation Plans</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-brand-dark">Choose Your Consultation</h2>
+        <p class="text-brand-dark/70 text-sm sm:text-base">
+          Fill in your details and we'll confirm your appointment.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
+        <!-- Option 1 -->
+        <div class="bg-white rounded-3xl p-8 border border-brand-sand shadow-sm hover:shadow-xl transition flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-semibold text-brand-sage uppercase tracking-wider mb-2">Introductory</div>
+            <h3 class="font-serif text-2xl font-bold text-brand-dark">Quick Consult</h3>
+            <p class="text-xs text-brand-dark/60 mt-1">20 Minutes Session</p>
+
+            <div class="my-6">
+              <span class="font-serif text-4xl font-bold text-brand-emerald">₹1,500</span>
+            </div>
+
+            <p class="text-xs text-brand-dark/70 leading-relaxed">
+              Targeted session for direct queries, nutritional check-in, and rapid guidance on single wellness bottlenecks.
+            </p>
+          </div>
+
+          <button onclick="openBookingModal('Quick Consult (20 Minutes) – ₹1500')" class="w-full mt-8 py-3 rounded-full bg-brand-sand hover:bg-brand-emerald hover:text-white text-brand-dark text-xs font-semibold tracking-wider uppercase transition">
+            Select Plan
+          </button>
+        </div>
+
+        <!-- Option 2 (Featured) -->
+        <div class="bg-white rounded-3xl p-8 border-2 border-brand-gold shadow-xl flex flex-col justify-between relative transform lg:-translate-y-2">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-brand-gold text-brand-dark px-4 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase shadow">
+            Most Popular
+          </div>
+          <div>
+            <div class="text-xs font-semibold text-brand-sage uppercase tracking-wider mb-2">In-Depth</div>
+            <h3 class="font-serif text-2xl font-bold text-brand-dark">Comprehensive Consultation</h3>
+            <p class="text-xs text-brand-dark/60 mt-1">60 Minutes Deep-Dive</p>
+
+            <div class="my-6">
+              <span class="font-serif text-4xl font-bold text-brand-emerald">₹3,000</span>
+            </div>
+
+            <p class="text-xs text-brand-dark/70 leading-relaxed">
+              Comprehensive clinical evaluation linking lifestyle, dietary habits, medical conditions, and emotional patterns.
+            </p>
+          </div>
+
+          <button onclick="openBookingModal('Comprehensive Consultation (60 Minutes) – ₹3000')" class="w-full mt-8 py-3 rounded-full bg-brand-emerald hover:bg-brand-dark text-white text-xs font-semibold tracking-wider uppercase transition shadow-md">
+            Select Plan
+          </button>
+        </div>
+
+        <!-- Option 3 -->
+        <div class="bg-white rounded-3xl p-8 border border-brand-sand shadow-sm hover:shadow-xl transition flex flex-col justify-between">
+          <div>
+            <div class="text-xs font-semibold text-brand-sage uppercase tracking-wider mb-2">Transformative</div>
+            <h3 class="font-serif text-2xl font-bold text-brand-dark">Lifestyle Reset Plan</h3>
+            <p class="text-xs text-brand-dark/60 mt-1">3 Full Sessions Program</p>
+
+            <div class="my-6">
+              <span class="font-serif text-4xl font-bold text-brand-emerald">₹7,500</span>
+            </div>
+
+            <p class="text-xs text-brand-dark/70 leading-relaxed">
+              Complete multi-week transformation combining nutrition psychology, sustainable dietary restructuring, and ongoing guidance.
+            </p>
+          </div>
+
+          <button onclick="openBookingModal('Lifestyle Reset Plan (3 sessions) – ₹7500')" class="w-full mt-8 py-3 rounded-full bg-brand-sand hover:bg-brand-emerald hover:text-white text-brand-dark text-xs font-semibold tracking-wider uppercase transition">
+            Select Plan
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 05: What They Say (Testimonials) -->
+  <section id="testimonials" class="py-24 bg-white border-t border-brand-sand">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-semibold tracking-[0.2em] text-brand-gold uppercase">What They Say</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-semibold text-brand-dark">Transformations That Inspire</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+        <!-- Priya Reddy -->
+        <div class="glass-card p-8 rounded-3xl flex flex-col justify-between">
+          <div>
+            <div class="text-brand-gold text-sm tracking-widest mb-4">★★★★★</div>
+            <blockquote class="text-sm text-brand-dark/80 leading-relaxed italic mb-6">
+              "Dr. Nida's approach completely changed how I think about food. She helped me understand the connection between my stress and eating habits — something I'd struggled with for years."
+            </blockquote>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-brand-sand">
+            <div class="w-10 h-10 rounded-full bg-brand-emerald/10 text-brand-emerald font-serif font-bold flex items-center justify-center text-sm">
+              PR
             </div>
             <div>
-              <span class="font-display font-bold text-lg tracking-wider text-white">DR. NFH</span>
-              <span class="block text-[9px] uppercase tracking-widest text-nfh-gold">Nutrition · Food · Health</span>
+              <div class="font-semibold text-xs text-brand-dark">Priya Reddy</div>
+              <div class="text-[11px] text-brand-dark/50">Corporate Professional, Hyderabad</div>
             </div>
           </div>
-          <p class="text-slate-400 text-xs leading-relaxed max-w-sm font-light">
-            An interdisciplinary health consultancy by Dr. Nida Fatima Hazari (PhD Gold Medallist, ICMR Scientist, Oxford Alum, Counselling Psychologist). Transforming metabolic and mental wellness through evidence and compassion.
+        </div>
+
+        <!-- Sunita Mehta -->
+        <div class="glass-card p-8 rounded-3xl flex flex-col justify-between">
+          <div>
+            <div class="text-brand-gold text-sm tracking-widest mb-4">★★★★★</div>
+            <blockquote class="text-sm text-brand-dark/80 leading-relaxed italic mb-6">
+              "The SMARTPLATE program we brought to our school was phenomenal. Students are more aware, more mindful, and our cafeteria choices have transformed. Highly recommend DR NFH!"
+            </blockquote>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-brand-sand">
+            <div class="w-10 h-10 rounded-full bg-brand-emerald/10 text-brand-emerald font-serif font-bold flex items-center justify-center text-sm">
+              SM
+            </div>
+            <div>
+              <div class="font-semibold text-xs text-brand-dark">Sunita Mehta</div>
+              <div class="text-[11px] text-brand-dark/50">Principal, International School, Pune</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arjun Kapoor -->
+        <div class="glass-card p-8 rounded-3xl flex flex-col justify-between">
+          <div>
+            <div class="text-brand-gold text-sm tracking-widest mb-4">★★★★★</div>
+            <blockquote class="text-sm text-brand-dark/80 leading-relaxed italic mb-6">
+              "As someone managing a lifestyle disease, I was overwhelmed. Dr. Nida made nutrition feel accessible and joyful — not restrictive. My health markers have improved dramatically."
+            </blockquote>
+          </div>
+          <div class="flex items-center gap-3 pt-4 border-t border-brand-sand">
+            <div class="w-10 h-10 rounded-full bg-brand-emerald/10 text-brand-emerald font-serif font-bold flex items-center justify-center text-sm">
+              AK
+            </div>
+            <div>
+              <div class="font-semibold text-xs text-brand-dark">Arjun Kapoor</div>
+              <div class="text-[11px] text-brand-dark/50">Entrepreneur, Bangalore</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 06: Contact & Footer -->
+  <footer id="contact" class="bg-brand-dark text-white pt-20 pb-12 border-t border-brand-gold/20">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-white/10">
+        
+        <!-- Brand Info -->
+        <div class="lg:col-span-5 space-y-4">
+          <span class="font-serif text-2xl font-bold tracking-wider text-white">DR NFH</span>
+          <p class="text-xs tracking-[0.2em] text-brand-gold uppercase">Nutrition · Food · Health</p>
+          <p class="text-xs text-white/70 max-w-sm leading-relaxed">
+            Empowering individuals, schools, and organisations to build healthier, more balanced, and purpose-driven lives through science and compassion.
           </p>
-          <p class="text-nfh-goldLight text-xs font-medium">
-            NFH Nutrition and Beyond LLP · Hyderabad, Telangana, India
-          </p>
+          <div class="flex items-center space-x-3 pt-2 text-white/70">
+            <a href="https://instagram.com" target="_blank" class="p-2 rounded-full bg-white/5 hover:text-brand-gold transition"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+            <a href="https://facebook.com" target="_blank" class="p-2 rounded-full bg-white/5 hover:text-brand-gold transition"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+            <a href="https://twitter.com" target="_blank" class="p-2 rounded-full bg-white/5 hover:text-brand-gold transition"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="p-2 rounded-full bg-white/5 hover:text-brand-gold transition"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
+            <a href="https://youtube.com" target="_blank" class="p-2 rounded-full bg-white/5 hover:text-brand-gold transition"><i data-lucide="youtube" class="w-4 h-4"></i></a>
+          </div>
         </div>
 
         <!-- Quick Links -->
-        <div>
-          <h5 class="text-white font-serif font-bold text-sm tracking-wider mb-4">Core Ecosystem</h5>
-          <ul class="space-y-2.5">
-            <li><a href="#about" class="hover:text-nfh-goldLight transition">About Dr. Nida</a></li>
-            <li><a href="#philosophy" class="hover:text-nfh-goldLight transition">Clinical Philosophy</a></li>
-            <li><a href="#smartplate" class="hover:text-nfh-goldLight transition">SMARTPLATE™ Framework</a></li>
-            <li><a href="#services" class="hover:text-nfh-goldLight transition">Consultation Packages</a></li>
-            <li><a href="#quiz" class="hover:text-nfh-goldLight transition">Mind-Gut Self Assessment</a></li>
+        <div class="lg:col-span-2 space-y-3">
+          <h4 class="text-xs font-semibold tracking-wider uppercase text-brand-gold">Quick Links</h4>
+          <ul class="text-xs space-y-2 text-white/70">
+            <li><a href="#" class="hover:text-white transition">Home</a></li>
+            <li><a href="#journey" class="hover:text-white transition">Start Your Journey</a></li>
+            <li><a href="#smartplate" class="hover:text-white transition">Programs</a></li>
+            <li><a href="#about" class="hover:text-white transition">Expert Panel</a></li>
+            <li><a href="#smartplate" class="hover:text-white transition">Corporate / Institutions</a></li>
           </ul>
         </div>
 
-        <!-- Working Hours & Contact -->
-        <div>
-          <h5 class="text-white font-serif font-bold text-sm tracking-wider mb-4">Clinical Office</h5>
-          <p class="text-slate-400 leading-relaxed">
-            Monday – Saturday: 10:00 AM – 7:00 PM IST<br>
-            Sunday: By Prior Appointment<br>
-            Consultations: Online & Hyderabad In-Clinic
-          </p>
-          <div class="mt-4 flex items-center space-x-4 text-slate-300 text-sm">
-            <a href="tel:+919030624163" class="hover:text-nfh-goldLight" title="Call"><i class="fa-solid fa-phone"></i></a>
-            <a href="https://wa.me/919030624163" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="mailto:dr.nidafatimahazari@gmail.com" class="hover:text-nfh-goldLight" title="Email"><i class="fa-solid fa-envelope"></i></a>
-          </div>
+        <!-- Services -->
+        <div class="lg:col-span-2 space-y-3">
+          <h4 class="text-xs font-semibold tracking-wider uppercase text-brand-gold">Services</h4>
+          <ul class="text-xs space-y-2 text-white/70">
+            <li><a href="#services" class="hover:text-white transition">Consultation</a></li>
+            <li><a href="#services" class="hover:text-white transition">Diet Plans</a></li>
+            <li><a href="#journey" class="hover:text-white transition">Group Sessions</a></li>
+            <li><a href="#journey" class="hover:text-white transition">Workshops</a></li>
+            <li><a href="#smartplate" class="hover:text-white transition">SMARTPLATE</a></li>
+            <li><a href="#journey" class="hover:text-white transition">Speaking / Talks</a></li>
+          </ul>
         </div>
 
-      </div>
-
-      <!-- Bottom Bar -->
-      <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-400 text-[11px]">
-        <div>
-          © <span id="currentYear"></span> <strong>DR NFH — NFH Nutrition and Beyond LLP</strong>. All Rights Reserved.
-        </div>
-        <div class="flex items-center gap-4">
-          <span>Medical Disclaimer: Educational & Lifestyle Counselling</span>
-          <span>•</span>
-          <a href="#contact" class="hover:text-white">Privacy Policy</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- JAVASCRIPT LOGIC -->
-  <script>
-    // Dynamic Year
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-    // Mobile Navigation Drawer Toggle
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const menuIcon = document.getElementById('menuIcon');
-
-    mobileMenuBtn.addEventListener('click', () => {
-      const isHidden = mobileMenu.classList.contains('hidden');
-      if (isHidden) {
-        mobileMenu.classList.remove('hidden');
-        menuIcon.classList.replace('fa-bars-staggered', 'fa-xmark');
-      } else {
-        mobileMenu.classList.add('hidden');
-        menuIcon.classList.replace('fa-xmark', 'fa-bars-staggered');
-      }
-    });
-
-    document.querySelectorAll('#mobileMenu a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        menuIcon.classList.replace('fa-xmark', 'fa-bars-staggered');
-      });
-    });
-
-    // SMARTPLATE 4-PILLAR DATA & INTERACTIVE TAB SWITCHER
-    const pillars = [
-      {
-        title: "1. Smart Eating: Bio-Individual Fueling",
-        subtitle: "Moving beyond calorie counting to cellular nourishment",
-        desc: "Designed around individual glycemic curves, nutrient timing, and whole functional foods. It balances blood sugar spikes to eliminate midday cognitive sluggishness in students and executives.",
-        points: ["Macro balance without deprivation", "Sustained dopamine and steady focus", "Traditional and cultural food integration"],
-        icon: "fa-plate-wheat"
-      },
-      {
-        title: "2. Mindful Living: Stress, Sleep & Autonomic Rest",
-        subtitle: "Calming the nervous system to heal digestion",
-        desc: "The vagus nerve links psychological stress directly to gut peristalsis and acid production. We integrate circadian rhythm synchronization, breath resets, and mindful eating cues.",
-        points: ["Vagus nerve activation techniques", "Circadian sleep-wake timing", "Decoupling stress from oral fixations"],
-        icon: "fa-moon"
-      },
-      {
-        title: "3. Food Literacy: Deciphering the Modern Food Landscape",
-        subtitle: "Empowering children and adults with nutritional awareness",
-        desc: "Equipping communities to decode deceptive food packaging, hidden high-fructose corn syrups, artificial preservatives, and endocrine disruptors lurking in daily pantry staples.",
-        points: ["Label and ingredient literacy", "Sugar addiction awareness", "Smart pantry and grocery audits"],
-        icon: "fa-barcode"
-      },
-      {
-        title: "4. Community Health: Institutional Ecosystems",
-        subtitle: "Creating supportive spaces in schools and corporate offices",
-        desc: "Health is rarely sustained in isolation. We audit school cafeterias, train catering vendors, guide HR wellness days, and conduct parent-student interactive nutrition bootcamps.",
-        points: ["Cafeteria and canteen audits", "Teacher and HR capacity building", "Peer accountability groups"],
-        icon: "fa-users"
-      }
-    ];
-
-    function switchPillar(index) {
-      // Update Tab Styles
-      for (let i = 0; i < 4; i++) {
-        const tab = document.getElementById(`pillarTab${i}`);
-        if (i === index) {
-          tab.className = "pillar-tab py-4 px-3 rounded-2xl text-center border transition-all duration-300 bg-nfh-gold text-nfh-dark border-nfh-gold font-bold shadow-lg";
-        } else {
-          tab.className = "pillar-tab py-4 px-3 rounded-2xl text-center border transition-all duration-300 bg-white/5 text-slate-300 border-white/10 hover:bg-white/10";
-        }
-      }
-
-      const p = pillars[index];
-      const container = document.getElementById('pillarContent');
-      container.innerHTML = `
-        <div class="lg:col-span-8 space-y-4">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-nfh-goldLight text-xs font-bold uppercase tracking-wider">
-            <i class="fa-solid ${p.icon}"></i> Pillar ${index + 1} of 4
+        <!-- Contact Coordinates -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="text-xs font-semibold tracking-wider uppercase text-brand-gold">Contact</h4>
+          <div class="text-xs space-y-2.5 text-white/80">
+            <p class="flex items-start gap-2.5">
+              <i data-lucide="map-pin" class="w-4 h-4 text-brand-gold shrink-0 mt-0.5"></i>
+              <span>Hyderabad, Telangana, India</span>
+            </p>
+            <p class="flex items-center gap-2.5">
+              <i data-lucide="phone" class="w-4 h-4 text-brand-gold shrink-0"></i>
+              <a href="tel:+919030624163" class="hover:text-white">+91 90306 24163</a>
+            </p>
+            <p class="flex items-center gap-2.5">
+              <i data-lucide="mail" class="w-4 h-4 text-brand-gold shrink-0"></i>
+              <a href="mailto:dr.nidafatimahazari@gmail.com" class="hover:text-white break-all">dr.nidafatimahazari@gmail.com</a>
+            </p>
           </div>
-          <h3 class="font-serif font-bold text-2xl sm:text-3xl text-white">${p.title}</h3>
-          <p class="text-amber-200/90 text-xs sm:text-sm font-medium italic">${p.subtitle}</p>
-          <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">${p.desc}</p>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
-            ${p.points.map(pt => `
-              <div class="bg-white/5 p-3 rounded-xl border border-white/10 text-xs text-slate-200 flex items-center gap-2">
-                <i class="fa-solid fa-circle-check text-nfh-gold text-xs"></i>
-                <span>${pt}</span>
-              </div>
-            `).join('')}
-          </div>
-        </div>
-        <div class="lg:col-span-4 flex justify-center">
-          <div class="w-40 h-40 sm:w-48 sm:h-48 rounded-full border-4 border-nfh-gold/40 bg-white/5 flex flex-col items-center justify-center p-4 text-center shadow-inner">
-            <i class="fa-solid ${p.icon} text-4xl sm:text-5xl text-nfh-goldLight mb-2"></i>
-            <span class="font-display text-[11px] uppercase tracking-widest text-slate-300 font-bold">SMARTPLATE™</span>
-            <span class="text-[10px] text-nfh-gold">Certified Framework</span>
-          </div>
-        </div>
-      `;
-    }
-
-    // Initialize first pillar on load
-    switchPillar(0);
-
-    // QUIZ CALCULATION
-    function calculateQuiz(e) {
-      e.preventDefault();
-      const q1 = parseInt(document.querySelector('input[name="q1"]:checked').value);
-      const q2 = parseInt(document.querySelector('input[name="q2"]:checked').value);
-      const q3 = parseInt(document.querySelector('input[name="q3"]:checked').value);
-      const q4 = document.querySelector('input[name="q4"]:checked').value;
-
-      const totalScore = q1 + q2 + q3; // Min 3, Max 9
-      const resultCard = document.getElementById('quizResult');
-
-      let category = "";
-      let desc = "";
-      let recommendedTier = "";
-
-      if (totalScore >= 8) {
-        category = "Balanced Metabolic Harmony (Score: " + totalScore + "/9)";
-        desc = "Your foundational habits are strong! You have good mind-gut awareness. A targeted session can help fine-tune longevity and specific performance markers.";
-        recommendedTier = "Quick Consult (20 Mins)";
-      } else if (totalScore >= 5) {
-        category = "Moderate Mind-Gut Strain (Score: " + totalScore + "/9)";
-        desc = "Signs of cortisol-driven fatigue, digestive distress, or emotional snacking loops are present. Addressing the gut-brain axis now will prevent chronic metabolic progression.";
-        recommendedTier = "Comprehensive Consultation (60 Mins)";
-      } else {
-        category = "High Metabolic & Emotional Burden (Score: " + totalScore + "/9)";
-        desc = "Your digestive and psychological rhythms are caught in an exhausting cycle of fatigue and dietary stress. An intensive multi-session reset is strongly advised.";
-        recommendedTier = "360° Lifestyle Reset Plan (3 Sessions)";
-      }
-
-      resultCard.classList.remove('hidden');
-      resultCard.innerHTML = `
-        <div class="space-y-4">
-          <div class="flex items-center justify-between pb-3 border-b border-white/20">
-            <span class="text-xs uppercase font-extrabold tracking-wider text-nfh-goldLight">Clinical Assessment Summary</span>
-            <span class="px-3 py-1 rounded-full text-xs font-bold bg-white/10 text-white">${category}</span>
-          </div>
-          <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">${desc}</p>
-          <div class="p-4 rounded-xl bg-white/10 border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>
-              <span class="text-[11px] text-amber-300 font-semibold uppercase block">Recommended Care Pathway:</span>
-              <strong class="text-sm font-bold text-white">${recommendedTier}</strong>
-            </div>
-            <button onclick="openBookingModal('${recommendedTier}')" class="px-5 py-2.5 rounded-full bg-nfh-gold text-nfh-dark font-extrabold text-xs uppercase tracking-wider hover:bg-white transition">
-              Book Recommended Slot
+          <div class="pt-2">
+            <button onclick="openBookingModal()" class="w-full py-2.5 rounded-full bg-brand-gold text-brand-dark font-semibold text-xs uppercase tracking-wider hover:bg-brand-goldLight transition shadow">
+              Get in Touch
             </button>
           </div>
         </div>
-      `;
 
-      resultCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      </div>
+
+      <!-- Copyright -->
+      <div class="pt-8 text-center text-xs text-white/50">
+        © 2026 DR NFH – NFH Nutrition and Beyond LLP. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Complete Consultation Booking Modal (drnfh.com exact fields) -->
+  <div id="bookingModal" class="fixed inset-0 z-50 hidden bg-brand-dark/70 backdrop-blur-sm overflow-y-auto flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-10 my-8 shadow-2xl relative border border-brand-sand animate-in fade-in zoom-in duration-200">
+      
+      <!-- Close Button -->
+      <button onclick="closeBookingModal()" class="absolute top-6 right-6 text-brand-dark/40 hover:text-brand-dark p-1">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="mb-8">
+        <span class="text-[11px] font-semibold text-brand-sage uppercase tracking-wider">Book a Consultation</span>
+        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-dark mt-1">Fill in your details</h3>
+        <p class="text-xs text-brand-dark/60 mt-1">We'll review your information and confirm your appointment.</p>
+      </div>
+
+      <!-- Form -->
+      <form id="consultationForm" onsubmit="handleBookingSubmit(event)" class="space-y-6">
+        
+        <!-- Preferred Option -->
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-brand-dark mb-2">Select Your Preferred Option *</label>
+          <select id="serviceOption" required class="w-full px-4 py-3 rounded-xl border border-brand-sand bg-brand-sand/30 text-xs text-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-emerald">
+            <option value="Quick Consult (20 Minutes) – ₹1500">Quick Consult (20 Minutes) – ₹1500</option>
+            <option value="Comprehensive Consultation (60 Minutes) – ₹3000">Comprehensive Consultation (60 Minutes) – ₹3000</option>
+            <option value="Lifestyle Reset Plan (3 sessions) – ₹7500">Lifestyle Reset Plan (3 sessions) – ₹7500</option>
+          </select>
+        </div>
+
+        <!-- Section: Basic Information -->
+        <div class="border-t border-brand-sand pt-4">
+          <h4 class="text-xs font-bold text-brand-dark uppercase tracking-wider mb-3">Basic Information</h4>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+            <div>
+              <label class="block text-xs text-brand-dark/70 mb-1">Full Name *</label>
+              <input type="text" id="fullName" required placeholder="Your full name" class="w-full px-3.5 py-2.5 rounded-xl border border-brand-sand text-xs focus:ring-2 focus:ring-brand-emerald outline-none">
+            </div>
+            <div>
+              <label class="block text-xs text-brand-dark/70 mb-1">Age *</label>
+              <input type="number" id="userAge" required placeholder="e.g. 32" class="w-full px-3.5 py-2.5 rounded-xl border border-brand-sand text-xs focus:ring-2 focus:ring-brand-emerald outline-none">
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-xs text-brand-dark/70 mb-1">Gender *</label>
+            <div class="flex items-center gap-6 text-xs text-brand-dark">
+              <label class="inline-flex items-center gap-2 cursor-pointer">
+                <input type="radio" name="gender" value="Male" required class="accent-brand-emerald">
+                <span>Male</span>
+              </label>
+              <label class="inline-flex items-center gap-2 cursor-pointer">
+                <input type="radio" name="gender" value="Female" class="accent-brand-emerald">
+                <span>Female</span>
+              </label>
+              <label class="inline-flex items-center gap-2 cursor-pointer">
+                <input type="radio" name="gender" value="Other" class="accent-brand-emerald">
+                <span>Other</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+            <div>
+              <label class="block text-xs text-brand-dark/70 mb-1">Contact Number *</label>
+              <input type="tel" id="contactNumber" required placeholder="+91 98765 43210" class="w-full px-3.5 py-2.5 rounded-xl border border-brand-sand text-xs focus:ring-2 focus:ring-brand-emerald outline-none">
+            </div>
+            <div>
+              <label class="block text-xs text-brand-dark/70 mb-1">Email Address *</label>
+              <input type="email" id="emailAddress" required placeholder="you@email.com" class="w-full px-3.5 py-2.5 rounded-xl border border-brand-sand text-xs focus:ring-2 focus:ring-brand-emerald outline-none">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs text-brand-dark/70 mb-1">Address *</label>
+            <input type="text" id="userAddress" required placeholder="City / Area" class="w-full px-3.5 py-2.5 rounded-xl border border-brand-sand text-xs focus:ring-2 focus:ring-brand-emerald outline-none">
+          </div>
+        </div>
+
+        <!-- Section: Understanding You -->
+        <div class="border-t border-brand-sand pt-4">
+          <h4 class="text-xs font-bold text-brand-dark uppercase tracking-wider mb-1">Understanding You</h4>
+          <p class="text-[11px] text-brand-dark/60 mb-3">(This helps us personalise your session)</p>
+
+          <div class="space-y-4">
+            <div>
+              <label class="block text-xs text-brand-dark/70 mb-1">What brings you here today? *</label>
+              <textarea id="reason" rows="2" required placeholder="Brief description of your primary concerns or goals..." class="w-full px-3.5 py-2.5 rounded-xl border border-brand-sand text-xs focus:ring-2 focus:ring-brand-emerald outline-none"></textarea>
+            </div>
+
+            <div>
+              <label class="block text-xs text-brand-dark/70 mb-1">Primary Focus Area *</label>
+              <select id="focusArea" required class="w-full px-3.5 py-2.5 rounded-xl border border-brand-sand text-xs text-brand-dark focus:ring-2 focus:ring-brand-emerald outline-none">
+                <option value="Nutrition and weight management">Nutrition and weight management</option>
+                <option value="Lifestyle and Medical conditions (Diabetes, Thyroid, BP, Gut/Digestive Issues, Fatty Liver, High Cholesterol, etc)">Lifestyle and Medical conditions (Diabetes, Thyroid, BP, Gut/Digestive Issues, Fatty Liver, High Cholesterol, etc)</option>
+                <option value="Mental Well-being & Emotional Eating">Mental Well-being & Emotional Eating</option>
+                <option value="Child & Adolescent Nutrition">Child & Adolescent Nutrition</option>
+                <option value="Women's Health & Hormonal Balance (PCOD, endometriosis, etc)">Women's Health & Hormonal Balance (PCOD, endometriosis, etc)</option>
+                <option value="Preventive Health Care & Lifestyle Management">Preventive Health Care & Lifestyle Management</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs text-brand-dark/70 mb-1">How would you describe your current lifestyle? *</label>
+              <div class="flex items-center gap-6 text-xs text-brand-dark">
+                <label class="inline-flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="lifestyle" value="Sedentary" required class="accent-brand-emerald">
+                  <span>Sedentary</span>
+                </label>
+                <label class="inline-flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="lifestyle" value="Moderately Active" class="accent-brand-emerald">
+                  <span>Moderately Active</span>
+                </label>
+                <label class="inline-flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="lifestyle" value="Highly Active" class="accent-brand-emerald">
+                  <span>Highly Active</span>
+                </label>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs text-brand-dark/70 mb-1">Do you have any existing medical conditions?</label>
+              <input type="text" id="medicalConditions" placeholder="None or list conditions..." class="w-full px-3.5 py-2.5 rounded-xl border border-brand-sand text-xs focus:ring-2 focus:ring-brand-emerald outline-none">
+            </div>
+          </div>
+        </div>
+
+        <!-- Section: Quick Self Check (NFH Insight Section) -->
+        <div class="border-t border-brand-sand pt-4">
+          <h4 class="text-xs font-bold text-brand-dark uppercase tracking-wider mb-3">Quick Self Check (NFH Insight Section)</h4>
+          
+          <div class="space-y-4">
+            <div>
+              <label class="block text-xs text-brand-dark/70 mb-1">How would you rate your eating habits? (1 - Poor to 5 - Excellent) *</label>
+              <div class="flex items-center justify-between max-w-xs text-xs">
+                <span>1 – Poor</span>
+                <div class="flex gap-3">
+                  <label class="cursor-pointer"><input type="radio" name="eatingRating" value="1" required class="accent-brand-emerald"> 1</label>
+                  <label class="cursor-pointer"><input type="radio" name="eatingRating" value="2" class="accent-brand-emerald"> 2</label>
+                  <label class="cursor-pointer"><input type="radio" name="eatingRating" value="3" class="accent-brand-emerald"> 3</label>
+                  <label class="cursor-pointer"><input type="radio" name="eatingRating" value="4" class="accent-brand-emerald"> 4</label>
+                  <label class="cursor-pointer"><input type="radio" name="eatingRating" value="5" class="accent-brand-emerald"> 5</label>
+                </div>
+                <span>5 – Excellent</span>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs text-brand-dark/70 mb-1">How often do you feel stressed or emotionally overwhelmed? *</label>
+              <div class="flex items-center gap-6 text-xs text-brand-dark">
+                <label class="inline-flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="stress" value="Rarely" required class="accent-brand-emerald">
+                  <span>Rarely</span>
+                </label>
+                <label class="inline-flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="stress" value="Sometimes" class="accent-brand-emerald">
+                  <span>Sometimes</span>
+                </label>
+                <label class="inline-flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="stress" value="Often" class="accent-brand-emerald">
+                  <span>Often</span>
+                </label>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs text-brand-dark/70 mb-1">How is your sleep quality? *</label>
+              <div class="flex items-center gap-6 text-xs text-brand-dark">
+                <label class="inline-flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="sleep" value="Good" required class="accent-brand-emerald">
+                  <span>Good</span>
+                </label>
+                <label class="inline-flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="sleep" value="Disturbed" class="accent-brand-emerald">
+                  <span>Disturbed</span>
+                </label>
+                <label class="inline-flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="sleep" value="Irregular" class="accent-brand-emerald">
+                  <span>Irregular</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs text-brand-dark/70 mb-1">Preferred Date *</label>
+                <input type="date" id="prefDate" required class="w-full px-3.5 py-2.5 rounded-xl border border-brand-sand text-xs focus:ring-2 focus:ring-brand-emerald outline-none">
+              </div>
+              <div>
+                <label class="block text-xs text-brand-dark/70 mb-1">Preferred Time *</label>
+                <input type="time" id="prefTime" required class="w-full px-3.5 py-2.5 rounded-xl border border-brand-sand text-xs focus:ring-2 focus:ring-brand-emerald outline-none">
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <label class="flex items-start gap-2.5 cursor-pointer text-xs text-brand-dark/80">
+                <input type="checkbox" required class="accent-brand-emerald mt-0.5">
+                <span>I understand that my selected consultation will be confirmed only after payment. *</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="w-full py-3.5 rounded-full bg-brand-emerald hover:bg-brand-dark text-white text-xs font-semibold uppercase tracking-wider transition shadow-lg shadow-brand-emerald/20 flex items-center justify-center gap-2">
+          <span>Submit Request</span>
+          <i data-lucide="arrow-right" class="w-4 h-4 text-brand-gold"></i>
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  <script>
+    lucide.createIcons();
+
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
     }
+    document.getElementById('mobileMenuBtn').addEventListener('click', toggleMobileMenu);
 
-    // MODAL CONTROL: APPOINTMENT
-    const bookingModal = document.getElementById('bookingModal');
-    const bookTier = document.getElementById('bookTier');
-    const appointmentForm = document.getElementById('appointmentForm');
-    const bookingSuccess = document.getElementById('bookingSuccess');
-
-    function openBookingModal(tierName) {
-      if (tierName) {
-        for (let i = 0; i < bookTier.options.length; i++) {
-          if (bookTier.options[i].value.includes(tierName) || tierName.includes(bookTier.options[i].value)) {
-            bookTier.selectedIndex = i;
-            break;
-          }
-        }
+    // Modal Control
+    function openBookingModal(planName) {
+      if (planName) {
+        document.getElementById('serviceOption').value = planName;
       }
-      appointmentForm.classList.remove('hidden');
-      bookingSuccess.classList.add('hidden');
-      bookingModal.classList.remove('hidden');
-      document.body.classList.add('overflow-hidden');
+      document.getElementById('bookingModal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
     }
 
     function closeBookingModal() {
-      bookingModal.classList.add('hidden');
-      document.body.classList.remove('overflow-hidden');
+      document.getElementById('bookingModal').classList.add('hidden');
+      document.body.style.overflow = 'auto';
     }
 
-    bookingModal.addEventListener('click', (e) => {
-      if (e.target === bookingModal) closeBookingModal();
+    // Close on backdrop click
+    document.getElementById('bookingModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeBookingModal();
+      }
     });
 
-    // Handle Appointment Submit & Construct WhatsApp Payload
-    function handleAppointmentSubmit(e) {
+    // Form Submission: Formats data and opens official WhatsApp
+    function handleBookingSubmit(e) {
       e.preventDefault();
-      const tier = document.getElementById('bookTier').value;
-      const name = document.getElementById('bookName').value;
-      const phone = document.getElementById('bookPhone').value;
-      const age = document.getElementById('bookAge').value;
-      const gender = document.getElementById('bookGender').value;
-      const city = document.getElementById('bookCity').value;
-      const mode = document.querySelector('input[name="mode"]:checked').value;
+      
+      const option = document.getElementById('serviceOption').value;
+      const name = document.getElementById('fullName').value;
+      const age = document.getElementById('userAge').value;
+      const gender = document.querySelector('input[name="gender"]:checked')?.value || 'N/A';
+      const phone = document.getElementById('contactNumber').value;
+      const email = document.getElementById('emailAddress').value;
+      const address = document.getElementById('userAddress').value;
+      const reason = document.getElementById('reason').value;
+      const focus = document.getElementById('focusArea').value;
+      const lifestyle = document.querySelector('input[name="lifestyle"]:checked')?.value || 'N/A';
+      const medical = document.getElementById('medicalConditions').value || 'None';
+      const eating = document.querySelector('input[name="eatingRating"]:checked')?.value || 'N/A';
+      const stress = document.querySelector('input[name="stress"]:checked')?.value || 'N/A';
+      const sleep = document.querySelector('input[name="sleep"]:checked')?.value || 'N/A';
+      const date = document.getElementById('prefDate').value;
+      const time = document.getElementById('prefTime').value;
 
-      const checkedBoxes = Array.from(document.querySelectorAll('input[name="focus"]:checked')).map(cb => cb.value);
-      const focusAreas = checkedBoxes.length ? checkedBoxes.join(', ') : 'General Holistic Optimization';
+      const message = `*DR NFH - Consultation Request*\n\n` +
+        `• *Option:* ${option}\n` +
+        `• *Full Name:* ${name}\n` +
+        `• *Age:* ${age} | *Gender:* ${gender}\n` +
+        `• *Contact:* ${phone}\n` +
+        `• *Email:* ${email}\n` +
+        `• *Address:* ${address}\n\n` +
+        `*Understanding You:*\n` +
+        `• *Reason:* ${reason}\n` +
+        `• *Focus Area:* ${focus}\n` +
+        `• *Lifestyle:* ${lifestyle}\n` +
+        `• *Medical Conditions:* ${medical}\n\n` +
+        `*Self Check:*\n` +
+        `• *Eating Habits:* ${eating}/5\n` +
+        `• *Stress Level:* ${stress}\n` +
+        `• *Sleep Quality:* ${sleep}\n\n` +
+        `• *Preferred Slot:* ${date} at ${time}`;
 
-      const waText = `*DR NFH Consultation Request*%0A` +
-        `*Name:* ${encodeURIComponent(name)}%0A` +
-        `*Tier:* ${encodeURIComponent(tier)}%0A` +
-        `*Phone:* ${encodeURIComponent(phone)}%0A` +
-        `*Age / Gender:* ${encodeURIComponent(age)} / ${encodeURIComponent(gender)}%0A` +
-        `*City / Timezone:* ${encodeURIComponent(city)}%0A` +
-        `*Mode:* ${encodeURIComponent(mode)}%0A` +
-        `*Focus Areas:* ${encodeURIComponent(focusAreas)}%0A%0A` +
-        `Hello Dr. Nida Fatima Hazari, I would like to schedule this session.`;
-
-      document.getElementById('bookingSuccessDetails').innerHTML = 
-        `Thank you <strong>${name}</strong>. Your consultation details for <strong>${tier}</strong> have been formatted. Click below to connect directly with Dr. Nida's desk on WhatsApp to confirm your preferred time slot.`;
-
-      document.getElementById('bookingWaDispatch').href = `https://wa.me/919030624163?text=${waText}`;
-
-      appointmentForm.classList.add('hidden');
-      bookingSuccess.classList.remove('hidden');
-    }
-
-    // MODAL CONTROL: INSTITUTIONAL
-    const instModal = document.getElementById('instModal');
-    function openInstitutionalModal() {
-      instModal.classList.remove('hidden');
-      document.body.classList.add('overflow-hidden');
-    }
-    function closeInstitutionalModal() {
-      instModal.classList.add('hidden');
-      document.body.classList.remove('overflow-hidden');
-    }
-    instModal.addEventListener('click', (e) => {
-      if (e.target === instModal) closeInstitutionalModal();
-    });
-
-    function handleInstSubmit(e) {
-      e.preventDefault();
-      document.getElementById('instSuccess').classList.remove('hidden');
-      setTimeout(() => {
-        closeInstitutionalModal();
-      }, 3500);
-    }
-
-    // Contact Form Handler
-    function handleContactSubmit(e) {
-      e.preventDefault();
-      const form = document.getElementById('contactForm');
-      form.innerHTML = `
-        <div class="py-12 text-center bg-emerald-50 rounded-2xl border border-emerald-200">
-          <div class="w-14 h-14 bg-nfh-emerald text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-3">
-            <i class="fa-solid fa-check"></i>
-          </div>
-          <h4 class="font-serif font-bold text-xl text-nfh-dark">Inquiry Sent Successfully</h4>
-          <p class="text-xs text-slate-600 mt-2 max-w-sm mx-auto">
-            Thank you for reaching out to DR NFH. Our clinical desk (+91 90306 24163) will respond within 24 working hours.
-          </p>
-        </div>
-      `;
+      const waUrl = `https://wa.me/919030624163?text=${encodeURIComponent(message)}`;
+      window.open(waUrl, '_blank');
+      closeBookingModal();
     }
   </script>
 </body>
